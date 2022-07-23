@@ -11,7 +11,7 @@
       "title": "Welcome to AtCoder",
       "url": "https://atcoder.jp/contests/abs/tasks/practice_1",
       "directory": {
-        "path": "practicea",
+        "path": "practice_1",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -22,7 +22,7 @@
       "title": "Product",
       "url": "https://atcoder.jp/contests/abs/tasks/abc086_a",
       "directory": {
-        "path": "abc086a",
+        "path": "abc086_a",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -33,7 +33,7 @@
       "title": "Placing Marbles",
       "url": "https://atcoder.jp/contests/abs/tasks/abc081_a",
       "directory": {
-        "path": "abc081a",
+        "path": "abc081_a",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -44,7 +44,7 @@
       "title": "Shift only",
       "url": "https://atcoder.jp/contests/abs/tasks/abc081_b",
       "directory": {
-        "path": "abc081b",
+        "path": "abc081_b",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -55,7 +55,7 @@
       "title": "Coins",
       "url": "https://atcoder.jp/contests/abs/tasks/abc087_b",
       "directory": {
-        "path": "abc087b",
+        "path": "abc087_b",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -66,7 +66,7 @@
       "title": "Some Sums",
       "url": "https://atcoder.jp/contests/abs/tasks/abc083_b",
       "directory": {
-        "path": "abc083b",
+        "path": "abc083_b",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -77,7 +77,7 @@
       "title": "Card Game for Two",
       "url": "https://atcoder.jp/contests/abs/tasks/abc088_b",
       "directory": {
-        "path": "abc088b",
+        "path": "abc088_b",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -88,7 +88,7 @@
       "title": "Kagami Mochi",
       "url": "https://atcoder.jp/contests/abs/tasks/abc085_b",
       "directory": {
-        "path": "abc085b",
+        "path": "abc085_b",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -99,7 +99,7 @@
       "title": "Otoshidama",
       "url": "https://atcoder.jp/contests/abs/tasks/abc085_c",
       "directory": {
-        "path": "abc085c",
+        "path": "abc085_c",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -110,7 +110,7 @@
       "title": "Daydream",
       "url": "https://atcoder.jp/contests/abs/tasks/arc065_a",
       "directory": {
-        "path": "abc049c",
+        "path": "arc065_a",
         "testdir": "tests",
         "submit": "main.py"
       }
@@ -121,7 +121,7 @@
       "title": "Traveling",
       "url": "https://atcoder.jp/contests/abs/tasks/arc089_a",
       "directory": {
-        "path": "abc086c",
+        "path": "arc089_a",
         "testdir": "tests",
         "submit": "main.py"
       }
