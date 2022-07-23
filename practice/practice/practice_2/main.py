@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from sys import stdin
 '''
-https://atcoder.jp/contests/practice/tasks/practice_1
+https://atcoder.jp/contests/practice/tasks/practice_2
 s = stdin.readline().rstrip()
 a = int(stdin.readline().rstrip())
 b,c = [int(char) for char in stdin.readline().rstrip().split()]

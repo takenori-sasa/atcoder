@@ -9,13 +9,23 @@
       "id": "practice_1",
       "label": "A",
       "title": "Welcome to AtCoder",
-      "url": "https://atcoder.jp/contests/practice/tasks/practice_1"
+      "url": "https://atcoder.jp/contests/practice/tasks/practice_1",
+      "directory": {
+        "path": "practice_1",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "practice_2",
       "label": "B",
       "title": "Interactive Sorting",
-      "url": "https://atcoder.jp/contests/practice/tasks/practice_2"
+      "url": "https://atcoder.jp/contests/practice/tasks/practice_2",
+      "directory": {
+        "path": "practice_2",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     }
   ]
 }
