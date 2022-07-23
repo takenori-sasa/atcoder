@@ -13,7 +13,7 @@
       "directory": {
         "path": "practicea",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -24,7 +24,7 @@
       "directory": {
         "path": "abc086a",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -35,7 +35,7 @@
       "directory": {
         "path": "abc081a",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -46,7 +46,7 @@
       "directory": {
         "path": "abc081b",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -57,7 +57,7 @@
       "directory": {
         "path": "abc087b",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -68,7 +68,7 @@
       "directory": {
         "path": "abc083b",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -79,7 +79,7 @@
       "directory": {
         "path": "abc088b",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -90,7 +90,7 @@
       "directory": {
         "path": "abc085b",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -101,7 +101,7 @@
       "directory": {
         "path": "abc085c",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -112,7 +112,7 @@
       "directory": {
         "path": "abc049c",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     },
     {
@@ -123,7 +123,7 @@
       "directory": {
         "path": "abc086c",
         "testdir": "tests",
-        "submit": "main.cpp"
+        "submit": "main.py"
       }
     }
   ]
