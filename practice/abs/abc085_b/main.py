@@ -8,3 +8,8 @@ b,c = [int(s) for s in stdin.readline().rstrip().split()]
 n = int(stdin.readline().rstrip())
 data = [stdin.readline().rstrip().split() for _ in range(n)]
 '''
+n = int(stdin.readline().rstrip())
+d = set()
+for _ in range(n):
+    d.add(int(stdin.readline().rstrip()))
+print(len(d))
