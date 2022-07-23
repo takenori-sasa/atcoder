@@ -5,3 +5,7 @@ from sys import stdin
 # 複数行
 # n = int(stdin.readline().rstrip())
 # data = [stdin.readline().rstrip().split() for _ in range(n)]
+a = int(stdin.readline().rstrip())
+b, c = [int(s) for s in stdin.readline().rstrip().split()]
+s = stdin.readline().rstrip()
+print(a+b+c, s)
