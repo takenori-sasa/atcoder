@@ -9,29 +9,21 @@ b,c = [int(char) for char in stdin.readline().rstrip().split()]
 n = int(stdin.readline().rstrip())
 data = [stdin.readline().rstrip().split() for _ in range(n)]
 '''
-n, c = [int(char) for char in stdin.readline().rstrip().split()]
-seq = []
-for _ in range(n):
-    seq.append([int(char) for char in stdin.readline().rstrip().split()])
-multiplier = [seq[0][1]]
-for i in range(n-1):
-    e = multiplier[-1]
-    if seq[i][0] == 1:
-        e &= seq[i][1]
-    elif seq[i][0] == 2:
-        e |= seq[i][1]
-    elif seq[i][0] == 3:
-        e ^= seq[i][1]
-    multiplier.append(e)
+N, C = map(int, input().split())
+TA = [list(map(int, input().split())) for _ in range(N)]
 
-
-ans = c
-for i in range(n):
-    if seq[0][0] == 1:
-        ans &= multiplier[i]
-    elif seq[0][0] == 2:
-        ans |= multiplier[i]
-    elif seq[0][0] == 3:
-        ans ^= multiplier[i]
-    print(ans)
-print(multiplier)
+ans = [0] * N
+for i in range(30):
+    cur = C >> i & 1
+    print(cur)
+    f = [0, 1]
+    for j, (T, A) in enumerate(TA):
+        a = A >> i & 1
+        if T == 1:
+            f = [f[0] & a, f[1] & a]
+        elif T == 2:
+            f = [f[0] | a, f[1] | a]
+        else:
+            f = [f[0] ^ a, f[1] ^ a]
+        cur = f[cur]
+        ans[j] |= cur << i
