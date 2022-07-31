@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+from sys import stdin
+'''
+https://atcoder.jp/contests/abc262/tasks/abc262_a
+s = stdin.readline().rstrip()
+a = int(stdin.readline().rstrip())
+b, c = [int(char) for char in stdin.readline().rstrip().split()]
+n = int(stdin.readline().rstrip())
+data = [stdin.readline().rstrip().split() for _ in range(n)]
+data = [[int(char) for char in stdin.readline().rstrip().split()]
+        for _ in range(n)]
+data = [[int(char) for char in stdin.readline().rstrip()] for _ in range(n)]
+data = [[int(char) for char in stdin.readline().rstrip().split()]
+        for _ in range(n)]
+print(*ans, sep="\n")
+'''
+y = int(stdin.readline().rstrip())
+for i in range(4):
+    if (y+i) % 4 == 2:
+        print(y+i)

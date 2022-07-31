@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc262",
+    "title": "AtCoder Beginner Contest 262",
+    "url": "https://atcoder.jp/contests/abc262"
+  },
+  "tasks": [
+    {
+      "id": "abc262_a",
+      "label": "A",
+      "title": "World Cup",
+      "url": "https://atcoder.jp/contests/abc262/tasks/abc262_a",
+      "directory": {
+        "path": "abc262_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc262_b",
+      "label": "B",
+      "title": "Triangle (Easier)",
+      "url": "https://atcoder.jp/contests/abc262/tasks/abc262_b",
+      "directory": {
+        "path": "abc262_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc262_c",
+      "label": "C",
+      "title": "Min Max Pair",
+      "url": "https://atcoder.jp/contests/abc262/tasks/abc262_c",
+      "directory": {
+        "path": "abc262_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc262_d",
+      "label": "D",
+      "title": "I Hate Non-integer Number",
+      "url": "https://atcoder.jp/contests/abc262/tasks/abc262_d",
+      "directory": {
+        "path": "abc262_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc262_e",
+      "label": "E",
+      "title": "Red and Blue Graph",
+      "url": "https://atcoder.jp/contests/abc262/tasks/abc262_e",
+      "directory": {
+        "path": "abc262_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc262_f",
+      "label": "F",
+      "title": "Erase and Rotate",
+      "url": "https://atcoder.jp/contests/abc262/tasks/abc262_f",
+      "directory": {
+        "path": "abc262_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc262_g",
+      "label": "G",
+      "title": "LIS with Stack",
+      "url": "https://atcoder.jp/contests/abc262/tasks/abc262_g",
+      "directory": {
+        "path": "abc262_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc262_h",
+      "label": "Ex",
+      "title": "Max Limited Sequence",
+      "url": "https://atcoder.jp/contests/abc262/tasks/abc262_h",
+      "directory": {
+        "path": "abc262_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
