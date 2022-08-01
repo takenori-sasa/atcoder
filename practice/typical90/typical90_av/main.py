@@ -14,3 +14,10 @@ data = [[int(char) for char in stdin.readline().rstrip().split()]
         for _ in range(n)]
 print(*ans, sep="\n")
 '''
+N, k = [int(char) for char in stdin.readline().rstrip().split()]
+score = []
+for _ in range(N):
+    a, b = [int(char) for char in stdin.readline().rstrip().split()]
+    score += [b, a-b]
+score = sorted(score, reverse=True)
+print(sum(score[:k]))

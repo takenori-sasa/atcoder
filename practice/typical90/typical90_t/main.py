@@ -14,3 +14,8 @@ data = [[int(char) for char in stdin.readline().rstrip().split()]
         for _ in range(n)]
 print(*ans, sep="\n")
 '''
+a, b, c = [int(char) for char in stdin.readline().rstrip().split()]
+if a < c**b:
+    print('Yes')
+else:
+    print('No')

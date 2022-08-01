@@ -14,3 +14,12 @@ data = [[int(char) for char in stdin.readline().rstrip().split()]
         for _ in range(n)]
 print(*ans, sep="\n")
 '''
+n, k = [int(char) for char in stdin.readline().rstrip().split()]
+a = [int(char) for char in stdin.readline().rstrip().split()]
+b = [int(char) for char in stdin.readline().rstrip().split()]
+for i in range(n):
+    k -= abs(a[i]-b[i])
+ans = 'No'
+if k >= 0 and k % 2 == 0:
+    ans = 'Yes'
+print(ans)

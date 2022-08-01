@@ -14,3 +14,8 @@ data = [[int(char) for char in stdin.readline().rstrip().split()]
         for _ in range(n)]
 print(*ans, sep="\n")
 '''
+h, w = [int(char) for char in stdin.readline().rstrip().split()]
+if h == 1 or w == 1:
+    print(h*w)
+else:
+    print(((h+1)//2)*((w+1)//2))

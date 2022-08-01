@@ -14,3 +14,12 @@ data = [[int(char) for char in stdin.readline().rstrip().split()]
         for _ in range(n)]
 print(*ans, sep="\n")
 '''
+user = set()
+n = int(stdin.readline().rstrip())
+for i in range(n):
+    s = stdin.readline().rstrip()
+    if s in user:
+        continue
+    else:
+        user.add(s)
+        print(i+1)

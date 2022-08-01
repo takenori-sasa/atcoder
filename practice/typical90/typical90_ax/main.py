@@ -14,3 +14,9 @@ data = [[int(char) for char in stdin.readline().rstrip().split()]
         for _ in range(n)]
 print(*ans, sep="\n")
 '''
+MOD = 10**9+7
+n, l = [int(char) for char in stdin.readline().rstrip().split()]
+a = [1]*(l)
+while len(a) < n+1:
+    a.append((a[-1]+a[-l]) % MOD)
+print(a[-1])
