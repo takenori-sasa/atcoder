@@ -15,19 +15,14 @@ data = [[int(char) for char in stdin.readline().rstrip().split()]
 print(*ans, sep="\n")
 '''
 l, r = [int(char) for char in stdin.readline().rstrip().split()]
-l_l, l_r = len(str(l)), len(str(r))
+digit_l, digit_r = len(str(l)), len(str(r))
 ans = 0
 MOD = 10**9+7
-if l_l == l_r:
-    ans = (r % MOD-l % MOD+1)*(l % MOD+r % MOD) % MOD//2
-if l_l+1 == l_r:
-    ans += (l % MOD+(10**l_l-1) % MOD)*((10**l_l-1) % MOD-l % MOD) % MOD//2
-    ans += (r % MOD+(10**l_r) % MOD)*((r+1) %
-                                      MOD - (10**(l_r-1)) % MOD+1) % MOD//2
-    # for i in range(l, r+1):
-    #     length = len(str(i)) % MOD
-    #     length *= i % MOD
-    #     length %= MOD
-    #     ans += length
-    #     ans %= MOD
+for digit in range(digit_l, digit_r+1):
+    left = max(10**(digit-1), l)
+    right = min(10**(digit)-1, r)
+    tmp = (digit)*(left+right)*(right-left+1)//2 % MOD
+    ans += tmp
+    ans %= MOD
+    print(ans, digit, left, right)
 print(ans)
