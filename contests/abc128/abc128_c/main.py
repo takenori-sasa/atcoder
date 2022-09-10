@@ -31,7 +31,10 @@ def main():
             # print('start', comb)
             is_on = True
             for j in range(m):
-                num_on = len(lump[j] & set(comb))
+                num_on = 0
+                for lu in lump[j]:
+                    if lu in comb:
+                        num_on += 1
                 if num_on % 2 != p[j]:
                     is_on = False
             if is_on:

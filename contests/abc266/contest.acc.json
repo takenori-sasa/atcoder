@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc266",
+    "title": "AtCoder Beginner Contest 266",
+    "url": "https://atcoder.jp/contests/abc266"
+  },
+  "tasks": [
+    {
+      "id": "abc266_a",
+      "label": "A",
+      "title": "Middle  Letter",
+      "url": "https://atcoder.jp/contests/abc266/tasks/abc266_a",
+      "directory": {
+        "path": "abc266_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc266_b",
+      "label": "B",
+      "title": "Modulo Number",
+      "url": "https://atcoder.jp/contests/abc266/tasks/abc266_b",
+      "directory": {
+        "path": "abc266_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc266_c",
+      "label": "C",
+      "title": "Convex Quadrilateral",
+      "url": "https://atcoder.jp/contests/abc266/tasks/abc266_c",
+      "directory": {
+        "path": "abc266_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc266_d",
+      "label": "D",
+      "title": "Snuke Panic (1D)",
+      "url": "https://atcoder.jp/contests/abc266/tasks/abc266_d",
+      "directory": {
+        "path": "abc266_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc266_e",
+      "label": "E",
+      "title": "Throwing the Die",
+      "url": "https://atcoder.jp/contests/abc266/tasks/abc266_e",
+      "directory": {
+        "path": "abc266_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc266_f",
+      "label": "F",
+      "title": "Well-defined Path Queries on a Namori",
+      "url": "https://atcoder.jp/contests/abc266/tasks/abc266_f",
+      "directory": {
+        "path": "abc266_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc266_g",
+      "label": "G",
+      "title": "Yet Another RGB Sequence",
+      "url": "https://atcoder.jp/contests/abc266/tasks/abc266_g",
+      "directory": {
+        "path": "abc266_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc266_h",
+      "label": "Ex",
+      "title": "Snuke Panic (2D)",
+      "url": "https://atcoder.jp/contests/abc266/tasks/abc266_h",
+      "directory": {
+        "path": "abc266_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}

@@ -1,29 +1,65 @@
 # -*- coding: utf-8 -*-
-from sys import stdin
+import sys
+# https://atcoder.jp/contests/typical90/tasks/typical90_r
+from bisect import bisect_left, bisect_right
 import math
+from itertools import permutations, combinations
+INF = float('inf')
+MOD = 10**9+7
 '''
-https://atcoder.jp/contests/typical90/tasks/typical90_r
-s = stdin.readline().rstrip()
-a = int(stdin.readline().rstrip())
-b, c = [int(char) for char in stdin.readline().rstrip().split()]
-n = int(stdin.readline().rstrip())
-data = [stdin.readline().rstrip().split() for _ in range(n)]
-data = [[int(char) for char in stdin.readline().rstrip().split()]
-        for _ in range(n)]
-data = [[int(char) for char in stdin.readline().rstrip()] for _ in range(n)]
-data = [[int(char) for char in stdin.readline().rstrip().split()]
-        for _ in range(n)]
-print(*ans, sep="\n")
+    s = input()
+    s,t = list(map(str, input().split()))
+    field = [''.join(input().split()) for _ in range(n)]
 '''
-t = int(stdin.readline().rstrip())
-l, x, y = [int(char) for char in stdin.readline().rstrip().split()]
-q = int(stdin.readline().rstrip())
-for _ in range(q):
-    e = int(stdin.readline().rstrip())
-    ang = 2*math.pi*e/t
-    ey, ez = -math.sin(ang), l/2-math.cos(ang)*l/2
-    hori = [x, y-ey, ez]
-    dist = math.sqrt(x**2+(y-ey)**2)
-    dep = math.atan2(ez, dist)
 
-    print(math.degrees(dep))
+
+def main():
+    t = int(input())
+    l, x, y = list(map(int, input().split()))
+    q = int(input())
+    for _ in range(q):
+        e = int(input())
+
+
+'''
+    for _ in range(n):
+        a = [int(char) for char in input().split()]
+    print(*ans, sep="\n")
+    trans=map(list, zip(*data))
+'''
+
+
+def bifull(__bilist__):
+    _num_ = len(__bilist__)
+    _ret_ = []
+    for k in range(_num_+1):
+        for comb in combinations(__bilist__, k):
+            _ret_.append(set(comb))
+    return _ret_
+
+
+def elevangle(x, y):
+    return math.degrees(math.atan2(y, x))
+
+
+def accm(li):
+    _ret_ = [0]
+    _num_ = len(li)
+    for i in range(_num_):
+        _ret_.append(_ret_[-1]+li[i])
+    return _ret_
+
+
+def permfull(arr, num=-1):
+    _num_ = len(arr)
+    _ret_ = []
+    if num == -1:
+        num = _num_
+    for perm in permutations(arr, num):
+        _ret_.append(list(perm))
+    return _ret_
+
+
+if __name__ == '__main__':
+    sys.setrecursionlimit(10**9)
+    main()

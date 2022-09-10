@@ -29,24 +29,34 @@ def main():
         talks.append(talk)
     # print(talks)
     ans = 0
-    for k in range(n+1):
-        for honests in combinations(range(n), k):
-            liars = set(range(n)) - set(honests)
-            honests = set(honests)
-            # print('start', honests, liars)
-            is_fact = True
-            for j in range(n):
-                talk = talks[j]
-                if j not in honests:
-                    continue
-                # print(j, talk[1], talk[0])
-                if not (talk[1] <= honests and honests.isdisjoint(talk[0])):
-                    # print('false', j)
+    for honests in bifull(range(n)):
+        liars = set(range(n)) - honests
+        # print('start', honests, liars)
+        is_fact = True
+        for j in range(n):
+            talk = talks[j]
+            if j not in honests:
+                continue
+            # print(j, talk[1], talk[0])
+            for honest in talk[1]:
+                if honest in liars:
                     is_fact = False
-            if is_fact:
-                # print('fact', honests, liars)
-                ans = max(ans, k)
+            for liar in talk[0]:
+                if liar in honests:
+                    is_fact = False
+        if is_fact:
+            # print('fact', honests, liars)
+            ans = max(ans, len(honests))
     print(ans)
+
+
+def bifull(__bilist__):
+    _num_ = len(__bilist__)
+    _ret_ = []
+    for k in range(_num_+1):
+        for comb in combinations(__bilist__, k):
+            _ret_.append(set(comb))
+    return _ret_
 
 
 if __name__ == '__main__':
