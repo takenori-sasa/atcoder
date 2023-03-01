@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc084/tasks/abc084_b
+# https://atcoder.jp/contests/abc059/tasks/abc059_b
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -7,20 +7,22 @@ from itertools import permutations, combinations
 INF = float('inf')
 MOD = 998244353
 '''
+    s = input()
     s,t = list(map(str, input().split()))
     field = [''.join(input().split()) for _ in range(n)]
 '''
 
 
 def main():
-    a, b = [int(_x) for _x in input().split()]
-    s = input()
-    ans = 'Yes'
-    if s[a] != '-':
-        ans = 'No'
-    for i in range(len(s)):
-        if i != a and s[i] not in '0123456789':
-            ans = 'No'
+    a = int(input())
+    b = int(input())
+    ans = ''
+    if a > b:
+        ans += 'Greater'.upper()
+    elif a < b:
+        ans += 'less'.upper()
+    else:
+        ans += 'equal'.upper()
     print(ans)
 
 

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc084/tasks/abc084_b
+# https://atcoder.jp/contests/abc071/tasks/abc071_b
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -13,15 +13,7 @@ MOD = 998244353
 
 
 def main():
-    a, b = [int(_x) for _x in input().split()]
     s = input()
-    ans = 'Yes'
-    if s[a] != '-':
-        ans = 'No'
-    for i in range(len(s)):
-        if i != a and s[i] not in '0123456789':
-            ans = 'No'
-    print(ans)
 
 
 '''
