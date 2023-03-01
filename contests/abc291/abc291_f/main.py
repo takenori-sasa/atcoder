@@ -14,9 +14,8 @@ MOD = 10**9+7
 
 
 def main():
-    a = list(map(int, input().split()))
     n = int(input())
-    grid = [list(map(int, input().split())) for _ in range(n)]
+    field = [''.join(input().split()) for _ in range(n)]
 
 
 '''

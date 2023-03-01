@@ -17,10 +17,12 @@ https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_b
 
 
 def main():
-    s = input()
-    b, c = [int(char) for char in input().split()]
     n = int(input())
-    area = [[int(char) for char in input().split()] for _ in range(n)]
+    for i in range(1, n+1):
+        if int(i*1.08) == n:
+            print(i)
+            return
+    print(':(')
 
 
 if __name__ == '__main__':
