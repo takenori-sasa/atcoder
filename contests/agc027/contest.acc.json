@@ -1,0 +1,75 @@
+{
+  "contest": {
+    "id": "agc027",
+    "title": "AtCoder Grand Contest 027",
+    "url": "https://atcoder.jp/contests/agc027"
+  },
+  "tasks": [
+    {
+      "id": "agc027_a",
+      "label": "A",
+      "title": "Candy Distribution Again",
+      "url": "https://atcoder.jp/contests/agc027/tasks/agc027_a",
+      "directory": {
+        "path": "agc027_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc027_b",
+      "label": "B",
+      "title": "Garbage Collector",
+      "url": "https://atcoder.jp/contests/agc027/tasks/agc027_b",
+      "directory": {
+        "path": "agc027_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc027_c",
+      "label": "C",
+      "title": "ABland Yard",
+      "url": "https://atcoder.jp/contests/agc027/tasks/agc027_c",
+      "directory": {
+        "path": "agc027_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc027_d",
+      "label": "D",
+      "title": "Modulo Matrix",
+      "url": "https://atcoder.jp/contests/agc027/tasks/agc027_d",
+      "directory": {
+        "path": "agc027_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc027_e",
+      "label": "E",
+      "title": "ABBreviate",
+      "url": "https://atcoder.jp/contests/agc027/tasks/agc027_e",
+      "directory": {
+        "path": "agc027_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc027_f",
+      "label": "F",
+      "title": "Grafting",
+      "url": "https://atcoder.jp/contests/agc027/tasks/agc027_f",
+      "directory": {
+        "path": "agc027_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
