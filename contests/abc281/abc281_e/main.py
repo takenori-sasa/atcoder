@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc094/tasks/abc094_a
+# https://atcoder.jp/contests/abc281/tasks/abc281_e
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -14,14 +14,18 @@ MOD = 998244353
 
 
 def main():
-    a, b, x = [int(_x) for _x in input().split()]
-    ans = 'NO'
-    if a <= x and x <= a+b:
-        ans = 'YES'
-    print(ans)
+    n, m, k = [int(_x) for _x in input().split()]
+    a = [int(_x) for _x in input().split()]
+    l = sorted(a[:m])[:k]
+    res = sum(l)
+    l_max = l[-1]
+    for i in range(1, n-m+1):
+        if a[i-1] < l_max:
+            res -= a[i-1]
 
 
 '''
+    a = {i+1: int(_x) for i, _x in enumerate(input().split())}
     for _ in range(n):
         a = [int(char) for char in input().split()]
     print(*ans, sep="\n")
@@ -29,15 +33,21 @@ def main():
 '''
 
 
-def prime(N):  # エラトステネスのふるい 篩 素数判定
-    primes = []
-    for i in range(2, N + 1):
-        primes.append(i)
-        for p in range(2, i):
-            if i % p == 0:
-                primes.remove(i)
-                break
-    return primes
+def primes(limit: int, minLimit: int = None):  # エラトステネスのふるい 篩 素数判定
+    if minLimit and (minLimit < 0 or minLimit > limit):
+        raise ValueError("incorrect minLimit")
+    isPrime = [True] * max(limit + 1, 2)
+    isPrime[0] = False
+    isPrime[1] = False
+    for p in range(2, limit + 1):
+        if not isPrime[p]:
+            continue
+        for i in range(p * p, limit + 1, p):
+            isPrime[i] = False
+    if minLimit:
+        return [i for i, x in enumerate(isPrime[minLimit:], start=minLimit) if x]
+    else:
+        return [i for i, x in enumerate(isPrime) if x]
 
 
 def bifull(__bilist__):
