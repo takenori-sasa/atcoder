@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc147/tasks/abc147_c
+# https://atcoder.jp/contests/abc107/tasks/abc107_b
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -13,46 +13,30 @@ MOD = 998244353
 
 
 def main():
-    n = int(input())
-    honest = []
-    liar = []
-    for __ in range(n):
-        a = int(input())
-        h = set()
-        l = set()
-        for _ in range(a):
-            x, y = [int(_x) for _x in input().split()]
-            if y == 1:
-                h.add(x-1)
-            else:
-                l.add(x-1)
-        honest.append(h)
-        liar.append(l)
-    # for i in range(n):
-    #     print(i, honest[i], liar[i])
-    h_max = 0
-    for i in range(0, pow(2, n)):
-        bi = bin(i)[2:]
-        bi = '0'*(n-len(bi))+bi
-        all_true = True
-        for j in range(len(bi)):
-            c_true = True
-            if bi[j] == '1':
-                for h in honest[j]:
-                    if bi[h] == '0':
-                        c_true = False
-                for l in liar[j]:
-                    if bi[l] == '1':
-                        c_true = False
-            if not c_true:
-                all_true = False
-        if all_true:
-            nh = 0
-            for b in bi:
-                if b == '1':
-                    nh += 1
-            h_max = max(h_max, nh)
-    print(h_max)
+    h, w = [int(_x) for _x in input().split()]
+    field = [''.join(input().split()) for _ in range(h)]
+    f = []
+    for i in range(h):
+        all_dot = True
+        for j in range(w):
+            if field[i][j] == '#':
+                all_dot = False
+        if not all_dot:
+            f.append(field[i])
+    field = list(zip(*f))
+    h = len(field)
+    w = len(field[0])
+    f = []
+    for i in range(h):
+        all_dot = True
+        for j in range(w):
+            if field[i][j] == '#':
+                all_dot = False
+        if not all_dot:
+            f.append(field[i])
+    field = list(zip(*f))
+    for i in range(len(field)):
+        print(''.join(field[i]))
 
 
 '''

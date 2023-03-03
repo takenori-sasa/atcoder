@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc147/tasks/abc147_c
+# https://atcoder.jp/contests/abc137/tasks/abc137_d
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -9,50 +9,29 @@ MOD = 998244353
 '''
     s = input()
     s,t = list(map(str, input().split()))
+    field = [''.join(input().split()) for _ in range(n)]
 '''
 
 
 def main():
-    n = int(input())
-    honest = []
-    liar = []
-    for __ in range(n):
-        a = int(input())
-        h = set()
-        l = set()
-        for _ in range(a):
-            x, y = [int(_x) for _x in input().split()]
-            if y == 1:
-                h.add(x-1)
-            else:
-                l.add(x-1)
-        honest.append(h)
-        liar.append(l)
-    # for i in range(n):
-    #     print(i, honest[i], liar[i])
-    h_max = 0
-    for i in range(0, pow(2, n)):
-        bi = bin(i)[2:]
-        bi = '0'*(n-len(bi))+bi
-        all_true = True
-        for j in range(len(bi)):
-            c_true = True
-            if bi[j] == '1':
-                for h in honest[j]:
-                    if bi[h] == '0':
-                        c_true = False
-                for l in liar[j]:
-                    if bi[l] == '1':
-                        c_true = False
-            if not c_true:
-                all_true = False
-        if all_true:
-            nh = 0
-            for b in bi:
-                if b == '1':
-                    nh += 1
-            h_max = max(h_max, nh)
-    print(h_max)
+    n, m = [int(_x) for _x in input().split()]
+    pay = {}
+    for _ in range(n):
+        a, b = [int(_x) for _x in input().split()]
+        if a not in pay:
+            pay[a] = []
+        pay[a].append(b)
+    mission = []
+    # print(pay)
+    ans = 0
+    for i in range(m+1):
+        if i in pay.keys():
+            mission += pay[i]
+        # print(i, mission)
+        mission = sorted(mission)
+        if len(mission) > 0:
+            ans += mission.pop()
+    print(ans)
 
 
 '''

@@ -14,9 +14,13 @@ MOD = 998244353
 
 
 def main():
-    n = int(input())
-    a = [int(_x) for _x in input().split()]
-    grid = [[int(_x) for _x in input().split()] for _ in range(n)]
+    a, b, c, x = [int(_x) for _x in input().split()]
+    ans = 0
+    if x <= a:
+        ans = 1
+    elif a+1 <= x and x <= b:
+        ans = c/(b-a-1+1)
+    print(ans)
 
 
 '''

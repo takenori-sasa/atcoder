@@ -1,44 +1,64 @@
 # -*- coding: utf-8 -*-
+# https://atcoder.jp/contests/abc263/tasks/abc263_c
 import sys
-from bisect import bisect_left
+from bisect import bisect_left, bisect_right
 import math
-sys.setrecursionlimit(10**9)
+from itertools import permutations, combinations
+INF = float('inf')
+MOD = 998244353
 '''
-https://atcoder.jp/contests/abc263/tasks/abc263_c
-s = stdin.readline().rstrip()
-b, c = [int(char) for char in input().split()]
-a = [int(char) for char in input().split()]
-n = int(input().rstrip())
-for _ in range(n):
-    a = [int(char) for char in input().split()]
-data = [input().split() for _ in range(n)]
-data = [[int(char) for char in input().split()] for _ in range(n)]
-data = [[int(char) for char in input().split()] for _ in range(n)]
-print(*ans, sep="\n")
-転置
-trans=map(list, zip(*data))
+    s = input()
+    s,t = list(map(str, input().split()))
+    field = [''.join(input().split()) for _ in range(n)]
 '''
-# INF = float('inf')
-# MOD = 10**9+7
-
-
-def dfs(n, ans, rest):
-    if len(ans) == n:
-        print(' '.join([str(c) for c in ans])+' ')
-        return
-    else:
-        for i in range(len(rest)):
-            dfs(n, ans+[rest[i]], rest[i+1:])
 
 
 def main():
+    n, m = [int(_x) for _x in input().split()]
+    l = [str(i) for i in range(1, m+1)]
+    for v in combinations(l, n):
+        print(' '.join(list(v)))
 
-    n, m = [int(char) for char in input().split()]
-    seq = [i+1 for i in range(m)]
-    for i in range(m-n+1):
-        # print([seq[i]], seq[i+1:])
-        dfs(n, [seq[i]], seq[i+1:])
+
+'''
+    for _ in range(n):
+        a = [int(char) for char in input().split()]
+    print(*ans, sep="\n")
+    trans=map(list, zip(*data))
+'''
+
+
+def bifull(__bilist__):
+    _num_ = len(__bilist__)
+    _ret_ = []
+    for k in range(_num_+1):
+        for comb in combinations(__bilist__, k):
+            _ret_.append(set(comb))
+    return _ret_
+
+
+def elevangle(x, y):
+    return math.degrees(math.atan2(y, x))
+
+
+def accm(li):
+    _ret_ = [0]
+    _num_ = len(li)
+    for i in range(_num_):
+        _ret_.append(_ret_[-1]+li[i])
+    return _ret_
+
+
+def permfull(arr, num=-1):
+    _num_ = len(arr)
+    _ret_ = []
+    if num == -1:
+        num = _num_
+    for perm in permutations(arr, num):
+        _ret_.append(list(perm))
+    return _ret_
 
 
 if __name__ == '__main__':
+    sys.setrecursionlimit(10**9)
     main()
