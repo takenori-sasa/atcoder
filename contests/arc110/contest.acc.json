@@ -1,0 +1,75 @@
+{
+  "contest": {
+    "id": "arc110",
+    "title": "AtCoder Regular Contest 110（Sponsored by KAJIMA CORPORATION）",
+    "url": "https://atcoder.jp/contests/arc110"
+  },
+  "tasks": [
+    {
+      "id": "arc110_a",
+      "label": "A",
+      "title": "Redundant Redundancy",
+      "url": "https://atcoder.jp/contests/arc110/tasks/arc110_a",
+      "directory": {
+        "path": "arc110_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "arc110_b",
+      "label": "B",
+      "title": "Many 110",
+      "url": "https://atcoder.jp/contests/arc110/tasks/arc110_b",
+      "directory": {
+        "path": "arc110_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "arc110_c",
+      "label": "C",
+      "title": "Exoswap",
+      "url": "https://atcoder.jp/contests/arc110/tasks/arc110_c",
+      "directory": {
+        "path": "arc110_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "arc110_d",
+      "label": "D",
+      "title": "Binomial Coefficient is Fun",
+      "url": "https://atcoder.jp/contests/arc110/tasks/arc110_d",
+      "directory": {
+        "path": "arc110_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "arc110_e",
+      "label": "E",
+      "title": "Shorten ABC",
+      "url": "https://atcoder.jp/contests/arc110/tasks/arc110_e",
+      "directory": {
+        "path": "arc110_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "arc110_f",
+      "label": "F",
+      "title": "Esoswap",
+      "url": "https://atcoder.jp/contests/arc110/tasks/arc110_f",
+      "directory": {
+        "path": "arc110_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
