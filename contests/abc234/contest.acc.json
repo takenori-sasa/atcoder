@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc234",
+    "title": "AtCoder Beginner Contest 234",
+    "url": "https://atcoder.jp/contests/abc234"
+  },
+  "tasks": [
+    {
+      "id": "abc234_a",
+      "label": "A",
+      "title": "Weird Function",
+      "url": "https://atcoder.jp/contests/abc234/tasks/abc234_a",
+      "directory": {
+        "path": "abc234_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc234_b",
+      "label": "B",
+      "title": "Longest Segment",
+      "url": "https://atcoder.jp/contests/abc234/tasks/abc234_b",
+      "directory": {
+        "path": "abc234_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc234_c",
+      "label": "C",
+      "title": "Happy New Year!",
+      "url": "https://atcoder.jp/contests/abc234/tasks/abc234_c",
+      "directory": {
+        "path": "abc234_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc234_d",
+      "label": "D",
+      "title": "Prefix K-th Max",
+      "url": "https://atcoder.jp/contests/abc234/tasks/abc234_d",
+      "directory": {
+        "path": "abc234_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc234_e",
+      "label": "E",
+      "title": "Arithmetic Number",
+      "url": "https://atcoder.jp/contests/abc234/tasks/abc234_e",
+      "directory": {
+        "path": "abc234_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc234_f",
+      "label": "F",
+      "title": "Reordering",
+      "url": "https://atcoder.jp/contests/abc234/tasks/abc234_f",
+      "directory": {
+        "path": "abc234_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc234_g",
+      "label": "G",
+      "title": "Divide a Sequence",
+      "url": "https://atcoder.jp/contests/abc234/tasks/abc234_g",
+      "directory": {
+        "path": "abc234_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc234_h",
+      "label": "Ex",
+      "title": "Enumerate Pairs",
+      "url": "https://atcoder.jp/contests/abc234/tasks/abc234_h",
+      "directory": {
+        "path": "abc234_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
