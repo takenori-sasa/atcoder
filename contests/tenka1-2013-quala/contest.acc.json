@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "tenka1-2013-quala",
+    "title": "天下一プログラマーコンテスト2013予選A",
+    "url": "https://atcoder.jp/contests/tenka1-2013-quala"
+  },
+  "tasks": [
+    {
+      "id": "tenka1_2013_qualA_a",
+      "label": "A",
+      "title": "天下一株式会社採用情報",
+      "url": "https://atcoder.jp/contests/tenka1-2013-quala/tasks/tenka1_2013_qualA_a",
+      "directory": {
+        "path": "tenka1_2013_qualA_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "tenka1_2013_qualA_b",
+      "label": "B",
+      "title": "天下一難易度設定",
+      "url": "https://atcoder.jp/contests/tenka1-2013-quala/tasks/tenka1_2013_qualA_b",
+      "directory": {
+        "path": "tenka1_2013_qualA_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "tenka1_2013_qualA_c",
+      "label": "C",
+      "title": "天下一二三パズル",
+      "url": "https://atcoder.jp/contests/tenka1-2013-quala/tasks/tenka1_2013_qualA_c",
+      "directory": {
+        "path": "tenka1_2013_qualA_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "tenka1_2013_qualA_d",
+      "label": "D",
+      "title": "天下一展開",
+      "url": "https://atcoder.jp/contests/tenka1-2013-quala/tasks/tenka1_2013_qualA_d",
+      "directory": {
+        "path": "tenka1_2013_qualA_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "tenka1_2013_qualA_e",
+      "label": "E",
+      "title": "天下一ジグソーパズル",
+      "url": "https://atcoder.jp/contests/tenka1-2013-quala/tasks/tenka1_2013_qualA_e",
+      "directory": {
+        "path": "tenka1_2013_qualA_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
