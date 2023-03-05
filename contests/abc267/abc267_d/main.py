@@ -3,6 +3,7 @@
 import sys
 from bisect import bisect_left, bisect_right
 import math
+from heapq import heappop, heappush
 from itertools import permutations, combinations
 INF = float('inf')
 MOD = 10**9+7
@@ -14,9 +15,16 @@ MOD = 10**9+7
 
 
 def main():
+    n, m = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    n = int(input())
-    grid = [list(map(int, input().split())) for _ in range(n)]
+    l = a[:m]
+    res = 0
+    for i in range(m):
+        res += l[i]*(i+1)
+    for i in range(n-m):
+        ll = l
+        ll.append(a[i+m])
+        heappop(ll)
 
 
 '''

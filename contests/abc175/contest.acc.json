@@ -1,0 +1,75 @@
+{
+  "contest": {
+    "id": "abc175",
+    "title": "AtCoder Beginner Contest 175",
+    "url": "https://atcoder.jp/contests/abc175"
+  },
+  "tasks": [
+    {
+      "id": "abc175_a",
+      "label": "A",
+      "title": "Rainy Season",
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_a",
+      "directory": {
+        "path": "abc175_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc175_b",
+      "label": "B",
+      "title": "Making Triangle",
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_b",
+      "directory": {
+        "path": "abc175_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc175_c",
+      "label": "C",
+      "title": "Walking Takahashi",
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_c",
+      "directory": {
+        "path": "abc175_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc175_d",
+      "label": "D",
+      "title": "Moving Piece",
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_d",
+      "directory": {
+        "path": "abc175_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc175_e",
+      "label": "E",
+      "title": "Picking Goods",
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_e",
+      "directory": {
+        "path": "abc175_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc175_f",
+      "label": "F",
+      "title": "Making Palindrome",
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_f",
+      "directory": {
+        "path": "abc175_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
