@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/digitalarts2012/tasks/digitalarts_1
+# https://atcoder.jp/contests/abc219/tasks/abc219_c
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -12,40 +12,16 @@ DXY4 = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 '''
-    s = input()
-    s,t = list(map(str, input().split()))
-    field = [''.join(input().split()) for _ in range(n)]
-    grid = [[int(_x) for _x in input().split()] for _ in range(n)]
+    s = input().rstrip()
+    s,t = [c for c in input().rstrip().split()]
+    field = [''.join(input().rstrip().split()) for _ in range(n)]
+    grid = [[int(_x) for _x in input().rstrip().split()] for _ in range(n)]
 '''
 
 
 def main():
-    s = [_x for _x in input().split()]
-    n = int(input())
-    fil = []
-    ans = []
-    for _ in range(n):
-        t = input().rstrip()
-        fil.append(t)
-    for c in s:
-        filtered = False
-        for f in fil:
-            # print(c, f, len(c), len(f))
-            if len(c) != len(f):
-                continue
-            is_match = True
-            for i in range(len(c)):
-                if c[i] == '*' or f[i] == '*':
-                    continue
-                if c[i] != f[i]:
-                    is_match = False
-            if is_match:
-                filtered = True
-        if filtered:
-            ans.append('*'*len(c))
-        else:
-            ans.append(c)
-    print(' '.join(ans))
+    n = int(input().rstrip())
+    a = [int(_x) for _x in input().rstrip().split()]
 
 
 '''
