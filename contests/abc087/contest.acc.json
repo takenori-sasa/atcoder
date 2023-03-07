@@ -9,7 +9,12 @@
       "id": "abc087_a",
       "label": "A",
       "title": "Buying Sweets",
-      "url": "https://atcoder.jp/contests/abc087/tasks/abc087_a"
+      "url": "https://atcoder.jp/contests/abc087/tasks/abc087_a",
+      "directory": {
+        "path": "abc087_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc087_b",
@@ -26,13 +31,23 @@
       "id": "arc090_a",
       "label": "C",
       "title": "Candies",
-      "url": "https://atcoder.jp/contests/abc087/tasks/arc090_a"
+      "url": "https://atcoder.jp/contests/abc087/tasks/arc090_a",
+      "directory": {
+        "path": "arc090_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "arc090_b",
       "label": "D",
       "title": "People on a Line",
-      "url": "https://atcoder.jp/contests/abc087/tasks/arc090_b"
+      "url": "https://atcoder.jp/contests/abc087/tasks/arc090_b",
+      "directory": {
+        "path": "arc090_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     }
   ]
 }
