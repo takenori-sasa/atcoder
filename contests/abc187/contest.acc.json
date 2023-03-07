@@ -1,0 +1,75 @@
+{
+  "contest": {
+    "id": "abc187",
+    "title": "AtCoder Beginner Contest 187",
+    "url": "https://atcoder.jp/contests/abc187"
+  },
+  "tasks": [
+    {
+      "id": "abc187_a",
+      "label": "A",
+      "title": "Large Digits",
+      "url": "https://atcoder.jp/contests/abc187/tasks/abc187_a",
+      "directory": {
+        "path": "abc187_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc187_b",
+      "label": "B",
+      "title": "Gentle Pairs",
+      "url": "https://atcoder.jp/contests/abc187/tasks/abc187_b",
+      "directory": {
+        "path": "abc187_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc187_c",
+      "label": "C",
+      "title": "1-SAT",
+      "url": "https://atcoder.jp/contests/abc187/tasks/abc187_c",
+      "directory": {
+        "path": "abc187_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc187_d",
+      "label": "D",
+      "title": "Choose Me",
+      "url": "https://atcoder.jp/contests/abc187/tasks/abc187_d",
+      "directory": {
+        "path": "abc187_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc187_e",
+      "label": "E",
+      "title": "Through Path",
+      "url": "https://atcoder.jp/contests/abc187/tasks/abc187_e",
+      "directory": {
+        "path": "abc187_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc187_f",
+      "label": "F",
+      "title": "Close Group",
+      "url": "https://atcoder.jp/contests/abc187/tasks/abc187_f",
+      "directory": {
+        "path": "abc187_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
