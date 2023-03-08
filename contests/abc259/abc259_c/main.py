@@ -34,31 +34,38 @@ def main():
         if target == c:
             cnt += 1
         else:
-            rlet.append((target, cnt))
+            rlet.append([target, cnt])
             cnt = 1
             target = c
-    rlet.append((target, cnt))
+    rlet.append([target, cnt])
+    # print(rlet)
     rles = []
     target = s[0]
     cnt = 1
-    for i in range(1, len(t)):
-        c = t[i]
+    for i in range(1, len(s)):
+        c = s[i]
         if target == c:
             cnt += 1
         else:
-            rles.append((target, cnt))
+            rles.append([target, cnt])
             cnt = 1
             target = c
-    rles.append((target, cnt))
+    rles.append([target, cnt])
+    # print(rles)
     ans = 'Yes'
     if len(rles) != len(rlet):
         ans = 'No'
     else:
         for i in range(len(rles)):
-            if rles[i][0] != rlet[i][0]
+            # print(rles[i], rlet[i])
+            if rles[i][0] != rlet[i][0]:
+                ans = 'No'
+            elif rles[i][1] == 1 and rlet[i][1] == 1:
+                continue
+            elif rles[i][1] > 1 and rles[i][1] <= rlet[i][1]:
+                continue
             ans = 'No'
-            elif rles[i][1] < rlet[i][] and rlet[i][1]
-        print('Yes')
+    print(ans)
 
 
 if __name__ == '__main__':

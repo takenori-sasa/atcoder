@@ -1,0 +1,53 @@
+{
+  "contest": {
+    "id": "abc079",
+    "title": "AtCoder Beginner Contest 079",
+    "url": "https://atcoder.jp/contests/abc079"
+  },
+  "tasks": [
+    {
+      "id": "abc079_a",
+      "label": "A",
+      "title": "Good Integer",
+      "url": "https://atcoder.jp/contests/abc079/tasks/abc079_a",
+      "directory": {
+        "path": "abc079_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc079_b",
+      "label": "B",
+      "title": "Lucas Number",
+      "url": "https://atcoder.jp/contests/abc079/tasks/abc079_b",
+      "directory": {
+        "path": "abc079_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc079_c",
+      "label": "C",
+      "title": "Train Ticket",
+      "url": "https://atcoder.jp/contests/abc079/tasks/abc079_c",
+      "directory": {
+        "path": "abc079_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc079_d",
+      "label": "D",
+      "title": "Wall",
+      "url": "https://atcoder.jp/contests/abc079/tasks/abc079_d",
+      "directory": {
+        "path": "abc079_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
