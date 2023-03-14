@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc222",
+    "title": "Exawizards Programming Contest 2021（AtCoder Beginner Contest 222）",
+    "url": "https://atcoder.jp/contests/abc222"
+  },
+  "tasks": [
+    {
+      "id": "abc222_a",
+      "label": "A",
+      "title": "Four Digits",
+      "url": "https://atcoder.jp/contests/abc222/tasks/abc222_a",
+      "directory": {
+        "path": "abc222_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc222_b",
+      "label": "B",
+      "title": "Failing Grade",
+      "url": "https://atcoder.jp/contests/abc222/tasks/abc222_b",
+      "directory": {
+        "path": "abc222_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc222_c",
+      "label": "C",
+      "title": "Swiss-System Tournament",
+      "url": "https://atcoder.jp/contests/abc222/tasks/abc222_c",
+      "directory": {
+        "path": "abc222_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc222_d",
+      "label": "D",
+      "title": "Between Two Arrays",
+      "url": "https://atcoder.jp/contests/abc222/tasks/abc222_d",
+      "directory": {
+        "path": "abc222_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc222_e",
+      "label": "E",
+      "title": "Red and Blue Tree",
+      "url": "https://atcoder.jp/contests/abc222/tasks/abc222_e",
+      "directory": {
+        "path": "abc222_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc222_f",
+      "label": "F",
+      "title": "Expensive Expense",
+      "url": "https://atcoder.jp/contests/abc222/tasks/abc222_f",
+      "directory": {
+        "path": "abc222_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc222_g",
+      "label": "G",
+      "title": "222",
+      "url": "https://atcoder.jp/contests/abc222/tasks/abc222_g",
+      "directory": {
+        "path": "abc222_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc222_h",
+      "label": "H",
+      "title": "Beautiful Binary Tree",
+      "url": "https://atcoder.jp/contests/abc222/tasks/abc222_h",
+      "directory": {
+        "path": "abc222_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
