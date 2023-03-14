@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc254/tasks/abc254_c
+# https://atcoder.jp/contests/abc244/tasks/abc244_b
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -8,41 +8,30 @@ from heapq import heappush, heappop
 from collections import deque
 INF = float('inf')
 MOD = 998244353
-dxy4 = [[0, 1], [0, -1], [1, 0], [-1, 0]]
-dxy4 = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+# MOD = pow(10, 9)+7
+DXY4 = [[1, 0], [0, -1], [-1, 0], [0, 1]]
+DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
+
 '''
-    s = input()
-    s,t = list(map(str, input().split()))
-    field = [''.join(input().split()) for _ in range(n)]
-    grid = [[int(_x) for _x in input().split()] for _ in range(n)]
+    s,t = [c for c in input().rstrip().split()]
+    field = [''.join(input().rstrip().split()) for _ in range(n)]
+    grid = [[int(_x) for _x in input().rstrip().split()] for _ in range(n)]
 '''
 
 
 def main():
-    n, k = [int(_x) for _x in input().split()]
-    a = [int(_x) for _x in input().split()]
-    p = {}
+    n = int(input().rstrip())
+    s = input().rstrip()
+    idx = 0
+    x = 0
+    y = 0
     for i in range(n):
-        if i % k not in p:
-            p[i % k] = []
-        p[i % k].append(a[i])
-    # print(p)
-    for c in p:
-        p[c].sort(reverse=True)
-    cnt = n
-    b = []
-    while cnt > 0:
-        for i in range(k):
-            if len(p[i]) > 0:
-                b.append(p[i].pop())
-                cnt -= 1
-            else:
-                p.pop(i)
-
-    ans = 'No'
-    if b == sorted(b):
-        ans = 'Yes'
-    print(ans)
+        if s[i] == 'R':
+            idx += 1
+        else:
+            x += DXY4[idx % 4][0]
+            y += DXY4[idx % 4][1]
+    print(x, y)
 
 
 '''

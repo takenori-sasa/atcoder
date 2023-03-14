@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc236",
+    "title": "AtCoder Beginner Contest 236",
+    "url": "https://atcoder.jp/contests/abc236"
+  },
+  "tasks": [
+    {
+      "id": "abc236_a",
+      "label": "A",
+      "title": "chukodai",
+      "url": "https://atcoder.jp/contests/abc236/tasks/abc236_a",
+      "directory": {
+        "path": "abc236_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc236_b",
+      "label": "B",
+      "title": "Who is missing?",
+      "url": "https://atcoder.jp/contests/abc236/tasks/abc236_b",
+      "directory": {
+        "path": "abc236_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc236_c",
+      "label": "C",
+      "title": "Route Map",
+      "url": "https://atcoder.jp/contests/abc236/tasks/abc236_c",
+      "directory": {
+        "path": "abc236_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc236_d",
+      "label": "D",
+      "title": "Dance",
+      "url": "https://atcoder.jp/contests/abc236/tasks/abc236_d",
+      "directory": {
+        "path": "abc236_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc236_e",
+      "label": "E",
+      "title": "Average and Median",
+      "url": "https://atcoder.jp/contests/abc236/tasks/abc236_e",
+      "directory": {
+        "path": "abc236_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc236_f",
+      "label": "F",
+      "title": "Spices",
+      "url": "https://atcoder.jp/contests/abc236/tasks/abc236_f",
+      "directory": {
+        "path": "abc236_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc236_g",
+      "label": "G",
+      "title": "Good Vertices",
+      "url": "https://atcoder.jp/contests/abc236/tasks/abc236_g",
+      "directory": {
+        "path": "abc236_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc236_h",
+      "label": "Ex",
+      "title": "Distinct Multiples",
+      "url": "https://atcoder.jp/contests/abc236/tasks/abc236_h",
+      "directory": {
+        "path": "abc236_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}

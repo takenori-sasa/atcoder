@@ -9,19 +9,34 @@
       "id": "abc250_a",
       "label": "A",
       "title": "Adjacent Squares",
-      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_a"
+      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_a",
+      "directory": {
+        "path": "abc250_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc250_b",
       "label": "B",
       "title": "Enlarged Checker Board",
-      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_b"
+      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_b",
+      "directory": {
+        "path": "abc250_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc250_c",
       "label": "C",
       "title": "Adjacent Swaps",
-      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_c"
+      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_c",
+      "directory": {
+        "path": "abc250_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc250_d",
@@ -38,25 +53,45 @@
       "id": "abc250_e",
       "label": "E",
       "title": "Prefix Equality",
-      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_e"
+      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_e",
+      "directory": {
+        "path": "abc250_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc250_f",
       "label": "F",
       "title": "One Fourth",
-      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_f"
+      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_f",
+      "directory": {
+        "path": "abc250_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc250_g",
       "label": "G",
       "title": "Stonks",
-      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_g"
+      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_g",
+      "directory": {
+        "path": "abc250_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc250_h",
       "label": "Ex",
       "title": "Trespassing Takahashi",
-      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_h"
+      "url": "https://atcoder.jp/contests/abc250/tasks/abc250_h",
+      "directory": {
+        "path": "abc250_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     }
   ]
 }
