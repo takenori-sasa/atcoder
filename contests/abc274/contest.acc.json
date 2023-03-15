@@ -9,19 +9,34 @@
       "id": "abc274_a",
       "label": "A",
       "title": "Batting Average",
-      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_a"
+      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_a",
+      "directory": {
+        "path": "abc274_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc274_b",
       "label": "B",
       "title": "Line Sensor",
-      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_b"
+      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_b",
+      "directory": {
+        "path": "abc274_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc274_c",
       "label": "C",
       "title": "Ameba",
-      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_c"
+      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_c",
+      "directory": {
+        "path": "abc274_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc274_d",
@@ -38,25 +53,45 @@
       "id": "abc274_e",
       "label": "E",
       "title": "Booster",
-      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_e"
+      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_e",
+      "directory": {
+        "path": "abc274_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc274_f",
       "label": "F",
       "title": "Fishing",
-      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_f"
+      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_f",
+      "directory": {
+        "path": "abc274_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc274_g",
       "label": "G",
       "title": "Security Camera 3",
-      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_g"
+      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_g",
+      "directory": {
+        "path": "abc274_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc274_h",
       "label": "Ex",
       "title": "XOR Sum of Arrays",
-      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_h"
+      "url": "https://atcoder.jp/contests/abc274/tasks/abc274_h",
+      "directory": {
+        "path": "abc274_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     }
   ]
 }
