@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc250/tasks/abc250_e
+# https://atcoder.jp/contests/abc151/tasks/abc151_c
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -21,24 +21,25 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
-    b = [int(_x) for _x in input().rstrip().split()]
-    a.reverse()
-    b.reverse()
-    sa = {0: set([])}
-    sb = {0: set([])}
-    for i in range(1, n+1):
-        sa[i] = sa[i-1] | set([a.pop()])
-        sb[i] = sb[i-1] | set([b.pop()])
-    # print(a, b)
-    q = int(input().rstrip())
-    for _ in range(q):
-        x, y = [int(_x) for _x in input().rstrip().split()]
-        ans = 'No'
-        if sa[x] == sb[y]:
-            ans = 'Yes'
-        print(ans)
+    n, m = [int(_x) for _x in input().rstrip().split()]
+    ac = 0
+    pena = {}
+    all_pena = 0
+    for i in range(m):
+        p, s = [_x for _x in input().rstrip().split()]
+        p = int(p)
+        if p not in pena:
+            pena[p] = 0
+        if s == 'WA':
+            if pena[p] >= 0:
+                pena[p] += 1
+        if s == 'AC':
+            if pena[p] >= 0:
+                all_pena += pena[p]
+                pena[p] = -1
+                ac += 1
+
+    print(ac, all_pena)
 
 
 '''

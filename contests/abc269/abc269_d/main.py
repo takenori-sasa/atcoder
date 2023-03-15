@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc250/tasks/abc250_e
+# https://atcoder.jp/contests/abc269/tasks/abc269_d
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -23,22 +23,6 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 def main():
     n = int(input().rstrip())
     a = [int(_x) for _x in input().rstrip().split()]
-    b = [int(_x) for _x in input().rstrip().split()]
-    a.reverse()
-    b.reverse()
-    sa = {0: set([])}
-    sb = {0: set([])}
-    for i in range(1, n+1):
-        sa[i] = sa[i-1] | set([a.pop()])
-        sb[i] = sb[i-1] | set([b.pop()])
-    # print(a, b)
-    q = int(input().rstrip())
-    for _ in range(q):
-        x, y = [int(_x) for _x in input().rstrip().split()]
-        ans = 'No'
-        if sa[x] == sb[y]:
-            ans = 'Yes'
-        print(ans)
 
 
 '''
