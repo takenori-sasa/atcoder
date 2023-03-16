@@ -1,27 +1,28 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc108/tasks/abc108_b
+# https://atcoder.jp/contests/abc169/tasks/abc169_a
 import sys
 from bisect import bisect_left, bisect_right
 import math
-from itertools import permutations, combinations
+from itertools import permutations, combinations, accumulate
+from heapq import heappush, heappop
+from collections import deque
 INF = float('inf')
 MOD = 998244353
+# MOD = pow(10, 9)+7
+DXY4 = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
+
 '''
-    s = input()
-    s,t = list(map(str, input().split()))
-    field = [''.join(input().split()) for _ in range(n)]
+    s = input().rstrip()
+    s,t = [c for c in input().rstrip().split()]
+    field = [''.join(input().rstrip().split()) for _ in range(n)]
+    grid = [[int(_x) for _x in input().rstrip().split()] for _ in range(n)]
 '''
 
 
 def main():
-    x1, y1, x2, y2 = [int(_x) for _x in input().split()]
-    # l = int(math.sqrt(pow(x-a, 2)+pow(y-b, 2)))
-    difx = x2-x1
-    dify = y2-y1
-    x3, y3 = x2-(dify), y2+(difx)
-    x4, y4 = x1-(dify), y1+(difx)
-    # print(difx, dify)
-    print(x3, y3, x4, y4)
+    n = int(input().rstrip())
+    a = [int(_x) for _x in input().rstrip().split()]
 
 
 '''
@@ -29,11 +30,12 @@ def main():
     for _ in range(n):
         a = [int(char) for char in input().split()]
     print(*ans, sep="\n")
-    trans=map(list, zip(*data))
+    tenchi = list(zip(*matrix))
 '''
 
 
-def primes(limit: int, minLimit: int = None):  # エラトステネスのふるい 篩 素数判定
+# エラトステネスのふるい 篩 素数判定
+def primes(limit: int, minLimit: int = None):
     if minLimit and (minLimit < 0 or minLimit > limit):
         raise ValueError("incorrect minLimit")
     isPrime = [True] * max(limit + 1, 2)
@@ -50,28 +52,20 @@ def primes(limit: int, minLimit: int = None):  # エラトステネスのふる�
         return [i for i, x in enumerate(isPrime) if x]
 
 
-def bifull(__bilist__):
+def bitfull(__bilist__):  # bit全探索 組み合わせ全探索
     _num_ = len(__bilist__)
     _ret_ = []
     for k in range(_num_+1):
         for comb in combinations(__bilist__, k):
-            _ret_.append(set(comb))
+            _ret_.append(list(comb))
     return _ret_
 
 
-def elevangle(x, y):
+def elevangle(x, y):  # 仰角 俯角 ぎょうかく ふかく
     return math.degrees(math.atan2(y, x))
 
 
-def accm(li):  # 累積 るいせき
-    _ret_ = [0]
-    _num_ = len(li)
-    for i in range(_num_):
-        _ret_.append(_ret_[-1]+li[i])
-    return _ret_
-
-
-def permfull(arr, num=-1):
+def permfull(arr, num: int = -1):  # 順列全探索
     _num_ = len(arr)
     _ret_ = []
     if num == -1:
@@ -81,6 +75,11 @@ def permfull(arr, num=-1):
     return _ret_
 
 
+def lcm_calc(x, y):
+    return (x * y) // math.gcd(x, y)
+
+
 if __name__ == '__main__':
     sys.setrecursionlimit(10**9)
+    input = sys.stdin.readline
     main()

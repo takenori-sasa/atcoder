@@ -14,9 +14,17 @@ MOD = 998244353
 
 
 def main():
-    n = int(input())
-    a = [int(_x) for _x in input().split()]
-    grid = [[int(_x) for _x in input().split()] for _ in range(n)]
+    q = int(input())
+    # a = [int(_x) for _x in input().split()]
+    lk = []
+    p = primes(pow(10, 5))
+    for i in p:
+        if (i+1)//2 in p and i % 2 == 1:
+            lk.append(i)
+    # print(lk[:10])
+    for i in range(q):
+        l, r = [int(_x) for _x in input().split()]
+        print(bisect_right(lk, r)-bisect_left(lk, l))
 
 
 '''

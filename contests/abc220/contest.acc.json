@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc220",
+    "title": "AtCoder Beginner Contest 220",
+    "url": "https://atcoder.jp/contests/abc220"
+  },
+  "tasks": [
+    {
+      "id": "abc220_a",
+      "label": "A",
+      "title": "Find Multiple",
+      "url": "https://atcoder.jp/contests/abc220/tasks/abc220_a",
+      "directory": {
+        "path": "abc220_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc220_b",
+      "label": "B",
+      "title": "Base K",
+      "url": "https://atcoder.jp/contests/abc220/tasks/abc220_b",
+      "directory": {
+        "path": "abc220_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc220_c",
+      "label": "C",
+      "title": "Long Sequence",
+      "url": "https://atcoder.jp/contests/abc220/tasks/abc220_c",
+      "directory": {
+        "path": "abc220_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc220_d",
+      "label": "D",
+      "title": "FG operation",
+      "url": "https://atcoder.jp/contests/abc220/tasks/abc220_d",
+      "directory": {
+        "path": "abc220_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc220_e",
+      "label": "E",
+      "title": "Distance on Large Perfect Binary Tree",
+      "url": "https://atcoder.jp/contests/abc220/tasks/abc220_e",
+      "directory": {
+        "path": "abc220_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc220_f",
+      "label": "F",
+      "title": "Distance Sums 2",
+      "url": "https://atcoder.jp/contests/abc220/tasks/abc220_f",
+      "directory": {
+        "path": "abc220_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc220_g",
+      "label": "G",
+      "title": "Isosceles Trapezium",
+      "url": "https://atcoder.jp/contests/abc220/tasks/abc220_g",
+      "directory": {
+        "path": "abc220_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc220_h",
+      "label": "H",
+      "title": "Security Camera",
+      "url": "https://atcoder.jp/contests/abc220/tasks/abc220_h",
+      "directory": {
+        "path": "abc220_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
