@@ -14,9 +14,22 @@ MOD = 998244353
 
 
 def main():
-    n = int(input())
-    a = [int(_x) for _x in input().split()]
-    grid = [[int(_x) for _x in input().split()] for _ in range(n)]
+    a, b, k = [int(_x) for _x in input().split()]
+    r = math.comb(a+b, a)
+    l = 0
+    s = ''
+    print(l, r)
+    while l < r:
+        m = (r+l)//2
+        # print(l, r, m, m > k, m < k)
+        if m < k:
+            l = m+1
+            s += 'b'
+
+        else:
+            r = m-1
+            s += 'a'
+        print(l, r, m, s)
 
 
 '''
