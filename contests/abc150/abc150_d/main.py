@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc112/tasks/abc112_b
+# https://atcoder.jp/contests/abc150/tasks/abc150_d
 import sys
 from bisect import bisect_left, bisect_right
 import math
@@ -21,8 +21,23 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    n, m = [int(_x) for _x in input().rstrip().split()]
+    a = [int(_x)//2 for _x in input().rstrip().split()]
+    lcm = 1
+    for b in a:
+        lcm = lcm_calc(lcm, b)
+    # cnt = 0
+    # l = lcm
+    # cnt = int(m//lcm)//2
+    # while l <= m:
+    #     cnt += 1
+    #     l += 2*lcm
+    # print(lcm)
+    for b in a:
+        if lcm//b % 2 != 1:
+            print(0)
+            return
+    print(int(m//lcm+1)//2)
 
 
 '''
@@ -73,6 +88,10 @@ def permfull(arr, num: int = -1):  # 順列全探索
     for perm in permutations(arr, num):
         _ret_.append(list(perm))
     return _ret_
+
+
+def lcm_calc(x, y):
+    return (x * y) // math.gcd(x, y)
 
 
 if __name__ == '__main__':
