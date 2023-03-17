@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc274/tasks/abc274_c
+# https://atcoder.jp/contests/abc233/tasks/abc233_b
+from itertools import permutations, combinations, accumulate, groupby
 import sys
 from bisect import bisect_left, bisect_right
 import math
-from itertools import permutations, combinations, accumulate
 from heapq import heappush, heappop
 from collections import deque
 INF = float('inf')
@@ -13,7 +13,6 @@ DXY4 = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 '''
-    s = input().rstrip()
     s,t = [c for c in input().rstrip().split()]
     field = [''.join(input().rstrip().split()) for _ in range(n)]
     grid = [[int(_x) for _x in input().rstrip().split()] for _ in range(n)]
@@ -21,16 +20,14 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
-    a.reverse()
-    gen = {1: 0}
-    for i in range(1, n+1):
-        p = a.pop()
-        gen[2*i] = gen[p]+1
-        gen[2*i+1] = gen[p]+1
-    for i in range(1, 2*n+2):
-        print(gen[i])
+    l, r = [int(_x) for _x in input().rstrip().split()]
+    s = input().rstrip()
+    t = ''
+    t += s[:l-1]
+    rev = s[l-1:r]
+    t += rev[::-1]
+    t += s[r:]
+    print(t)
 
 
 '''
@@ -81,6 +78,39 @@ def permfull(arr, num: int = -1):  # 順列全探索
     for perm in permutations(arr, num):
         _ret_.append(list(perm))
     return _ret_
+
+
+def lcm_calc(x, y):
+    return (x * y) // math.gcd(x, y)
+
+
+def runLengthEncode(S: str) -> "List[tuple(str, int)]":
+    # RUN LENGTH ENCODING str -> list(tuple()) ランレングス ランレンクス
+    # example) "aabbbbaaca" -> [('a', 2), ('b', 4), ('a', 2), ('c', 1), ('a', 1)]
+    grouped = groupby(S)
+    res = []
+    for k, v in grouped:
+        res.append((k, int(len(list(v)))))
+    return res
+
+
+def runLengthDecode(L: "list[tuple]") -> str:
+    # RUN LENGTH DECODING list(tuple()) -> str  ランレングス ランレンクス
+    # example) [('a', 2), ('b', 4), ('a', 2), ('c', 1), ('a', 1)] -> "aabbbbaaca"
+    res = ""
+    for c, n in L:
+        res += c * int(n)
+    return res
+
+
+def runLengthEncodeToString(S: str) -> str:
+    # RUN LENGTH ENCODING str -> str ランレングス ランレンクス
+    # example) "aabbbbaaca" -> "a2b4a2c1a1"
+    grouped = groupby(S)
+    res = ""
+    for k, v in grouped:
+        res += k + str(len(list(v)))
+    return res
 
 
 if __name__ == '__main__':

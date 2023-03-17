@@ -18,7 +18,37 @@ MOD = 998244353
 
 def main():
     n = int(input())
-    a = [int(_x) for _x in input().split()]
+    # n = 4
+    squares = set()
+    # square_dict = {}
+    ans = 0
+    rest = {}
+    divisors = {}
+    for i in range(1, n+1):
+        if i*i > n:
+            break
+        # square_dict[i] = pow(i, 2)
+        squares.add(pow(i, 2))
+    for i in range(1, n+1):
+        divisors[i] = make_divisors(i)
+    # for i in range(1, n+1):
+    #     k = i//max_square_divisior(i, squares)
+    #     if k not in rest:
+    #         rest[k] = 0
+    #     rest[k] += 1
+    # for k in rest:
+    #     ans += pow(rest[k], 2)
+    # for i in range(1, n+1):
+    #     for d in reversed(divisors[i]):
+    #         if d in squares:
+    #             if i//d not in rest:
+    #                 rest[i//d] = 0
+    #             rest[i//d] += 1
+    #             break
+    # for v in rest.values():
+    #     ans += pow(v, 2)
+
+    print(ans)
 
 
 '''
@@ -28,6 +58,18 @@ def main():
     print(*ans, sep="\n")
     tenchi = list(zip(*matrix))
 '''
+
+
+def make_divisors(n):
+    lower_divisors, upper_divisors = [], []
+    i = 1
+    while i*i <= n:
+        if n % i == 0:
+            lower_divisors.append(i)
+            if i != n // i:
+                upper_divisors.append(n//i)
+        i += 1
+    return lower_divisors + upper_divisors[::-1]
 
 
 # エラトステネスのふるい 篩 素数判定

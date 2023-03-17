@@ -18,18 +18,22 @@ def main():
     r = math.comb(a+b, a)
     l = 0
     s = ''
-    print(l, r)
+    # print(l, r)
     while l < r:
         m = (r+l)//2
         # print(l, r, m, m > k, m < k)
         if m < k:
             l = m+1
             s += 'b'
-
+            b -= 1
         else:
             r = m-1
             s += 'a'
-        print(l, r, m, s)
+            a -= 1
+        # print(l, r, m, s)
+    s += 'a'*a
+    s += 'b'*b
+    print(s)
 
 
 '''
