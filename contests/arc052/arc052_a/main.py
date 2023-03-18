@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc111/tasks/abc111_b
+# https://atcoder.jp/contests/arc052/tasks/arc052_a
 from itertools import permutations, combinations, accumulate, groupby
 import sys
 from bisect import bisect_left, bisect_right
@@ -21,8 +21,12 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    s = input().rstrip()
+    n = ''
+    for c in s:
+        if c in '0123456789':
+            n += c
+    print(n)
 
 
 '''

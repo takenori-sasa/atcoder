@@ -17,10 +17,12 @@ https://atcoder.jp/contests/abc120/tasks/abc120_a
 
 
 def main():
-    s = input()
-    b, c = [int(char) for char in input().split()]
-    n = int(input())
-    area = [[int(char) for char in input().split()] for _ in range(n)]
+    a, b, c = [int(char) for char in input().split()]
+    cnt = 0
+    while b >= a:
+        cnt += 1
+        b -= a
+    print(min(c, cnt))
 
 
 if __name__ == '__main__':

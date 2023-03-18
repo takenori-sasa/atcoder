@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc111/tasks/abc111_b
+# https://atcoder.jp/contests/abc111/tasks/arc103_a
 from itertools import permutations, combinations, accumulate, groupby
 import sys
 from bisect import bisect_left, bisect_right
@@ -22,7 +22,51 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    v = [int(_x) for _x in input().rstrip().split()]
+    cnt = {}
+    even = {}
+    odd = {}
+    for i in range(n):
+        if i % 2 != 0:
+            if v[i] not in even:
+                even[v[i]] = 0
+            even[v[i]] += 1
+        else:
+            if v[i] not in odd:
+                odd[v[i]] = 0
+            odd[v[i]] += 1
+    # print(odd, even)
+    odd = sorted(odd.items(), key=lambda x: x[1])
+    even = sorted(even.items(), key=lambda x: x[1])
+    ok, ov = odd.pop()
+    ek, ev = even.pop()
+    if ok != ek:
+        print(n-ov-ev)
+        return
+    if len(odd) == 0 and len(even) == 0:
+        print(abs(ov))
+    elif len(odd) == 0:
+        ek, ev = even.pop()
+        print(n-ov-ev)
+    elif len(even) == 0:
+        ok, ov = odd.pop()
+        print(n-ov-ev)
+    else:
+        okk, ovv = odd.pop()
+        ekv, evv = even.pop()
+        print(min(n-ov-evv, n-ev-ovv))
+    # print(cnt)
+    # if len(cnt) == 1:
+    #     print(n//2)
+    #     return
+    # v = list(cnt.values())
+    # v.sort()
+    # first = v.pop()
+    # second = v.pop()
+    # if len(v) == 0:
+    #     print(abs(n//2-first))
+    #     return
+    # print(n-first-second)
 
 
 '''

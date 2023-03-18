@@ -23,14 +23,15 @@ def main():
     # square_dict = {}
     ans = 0
     rest = {}
-    divisors = {}
+    factor = {i: [0] for i in range(1, n+1)}
     for i in range(1, n+1):
         if i*i > n:
             break
         # square_dict[i] = pow(i, 2)
         squares.add(pow(i, 2))
-    for i in range(1, n+1):
-        divisors[i] = make_divisors(i)
+    for i in range(1, n + 1):
+        for j in range(i, n + 1, i):
+            factor[j].append(i)
     # for i in range(1, n+1):
     #     k = i//max_square_divisior(i, squares)
     #     if k not in rest:
@@ -38,15 +39,15 @@ def main():
     #     rest[k] += 1
     # for k in rest:
     #     ans += pow(rest[k], 2)
-    # for i in range(1, n+1):
-    #     for d in reversed(divisors[i]):
-    #         if d in squares:
-    #             if i//d not in rest:
-    #                 rest[i//d] = 0
-    #             rest[i//d] += 1
-    #             break
-    # for v in rest.values():
-    #     ans += pow(v, 2)
+    for i in range(1, n+1):
+        for d in reversed(factor[i]):
+            if d in squares:
+                if i//d not in rest:
+                    rest[i//d] = 0
+                rest[i//d] += 1
+                break
+    for v in rest.values():
+        ans += pow(v, 2)
 
     print(ans)
 
