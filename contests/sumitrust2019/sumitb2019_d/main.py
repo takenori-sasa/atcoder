@@ -19,16 +19,23 @@ https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_d
 
 def main():
     n = int(input())
-    s = input()
+    s = list(int(c) for c in input())
     cnt = 0
+    first = {}
+    end = {}
+    for i in range(n):
+        if s[i] not in first:
+            first[s[i]] = i
+        end[s[i]] = i
+    # print(first)
+    # print(end)
     for i in range(10):
         for j in range(10):
             for k in range(10):
-                if str(i) not in s or str(k) not in s:
+                if i not in first or j not in first or k not in first:
                     continue
-                idx_i = min([l for l in range(n) if s[l] == str(i)])
-                idx_k = max([l for l in range(n) if s[l] == str(k)])
-                if str(j) in s[idx_i+1:idx_k]:
+                print(i, j, k)
+                if first[i] < first[j] and end[j] < end[k]:
                     cnt += 1
     print(cnt)
 
