@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc217/tasks/abc217_e
+# https://atcoder.jp/contests/abc082/tasks/arc087_b
+from itertools import permutations, combinations, accumulate, groupby
 import sys
 from bisect import bisect_left, bisect_right
 import math
-from itertools import permutations, combinations
-from heapq import heapify, heappush, heappop
+from heapq import heappush, heappop
 from collections import deque
 INF = float('inf')
 MOD = 998244353
+# MOD = pow(10, 9)+7
 DXY4 = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
@@ -20,25 +21,8 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    nq = int(input().rstrip())
-    srtd = []
-    heapify(srtd)
-    stanby = deque([])
-    for i in range(nq):
-        q = [int(_x) for _x in input().rstrip().split()]
-        if q[0] == 1:
-            stanby.append(q[1])
-        elif q[0] == 2:
-            if len(srtd) > 0:
-                print(heappop(srtd))
-                # print(q[0], srtd)
-            else:
-                print(stanby.popleft())
-                # print(q[0], stanby)
-        else:
-            while len(stanby) > 0:
-                heappush(srtd, stanby.pop())
-            # print(srtd, stanby)
+    n = int(input().rstrip())
+    a = [int(_x) for _x in input().rstrip().split()]
 
 
 '''
@@ -81,14 +65,6 @@ def elevangle(x, y):  # 仰角 俯角 ぎょうかく ふかく
     return math.degrees(math.atan2(y, x))
 
 
-def accm(li):  # 累積和 るいせき
-    _ret_ = [0]
-    _num_ = len(li)
-    for i in range(_num_):
-        _ret_.append(_ret_[-1]+li[i])
-    return _ret_
-
-
 def permfull(arr, num: int = -1):  # 順列全探索
     _num_ = len(arr)
     _ret_ = []
@@ -97,6 +73,39 @@ def permfull(arr, num: int = -1):  # 順列全探索
     for perm in permutations(arr, num):
         _ret_.append(list(perm))
     return _ret_
+
+
+def lcm_calc(x, y):
+    return (x * y) // math.gcd(x, y)
+
+
+def runLengthEncode(S: str) -> "List[tuple(str, int)]":
+    # RUN LENGTH ENCODING str -> list(tuple()) ランレングス ランレンクス
+    # example) "aabbbbaaca" -> [('a', 2), ('b', 4), ('a', 2), ('c', 1), ('a', 1)]
+    grouped = groupby(S)
+    res = []
+    for k, v in grouped:
+        res.append((k, int(len(list(v)))))
+    return res
+
+
+def runLengthDecode(L: "list[tuple]") -> str:
+    # RUN LENGTH DECODING list(tuple()) -> str  ランレングス ランレンクス
+    # example) [('a', 2), ('b', 4), ('a', 2), ('c', 1), ('a', 1)] -> "aabbbbaaca"
+    res = ""
+    for c, n in L:
+        res += c * int(n)
+    return res
+
+
+def runLengthEncodeToString(S: str) -> str:
+    # RUN LENGTH ENCODING str -> str ランレングス ランレンクス
+    # example) "aabbbbaaca" -> "a2b4a2c1a1"
+    grouped = groupby(S)
+    res = ""
+    for k, v in grouped:
+        res += k + str(len(list(v)))
+    return res
 
 
 if __name__ == '__main__':
