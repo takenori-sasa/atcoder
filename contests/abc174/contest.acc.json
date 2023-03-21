@@ -1,0 +1,75 @@
+{
+  "contest": {
+    "id": "abc174",
+    "title": "AtCoder Beginner Contest 174",
+    "url": "https://atcoder.jp/contests/abc174"
+  },
+  "tasks": [
+    {
+      "id": "abc174_a",
+      "label": "A",
+      "title": "Air Conditioner",
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_a",
+      "directory": {
+        "path": "abc174_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc174_b",
+      "label": "B",
+      "title": "Distance ",
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_b",
+      "directory": {
+        "path": "abc174_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc174_c",
+      "label": "C",
+      "title": "Repsept",
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_c",
+      "directory": {
+        "path": "abc174_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc174_d",
+      "label": "D",
+      "title": "Alter Altar",
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_d",
+      "directory": {
+        "path": "abc174_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc174_e",
+      "label": "E",
+      "title": "Logs",
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_e",
+      "directory": {
+        "path": "abc174_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc174_f",
+      "label": "F",
+      "title": "Range Set Query",
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_f",
+      "directory": {
+        "path": "abc174_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
