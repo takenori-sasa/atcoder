@@ -22,7 +22,8 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n, q = [int(_x) for _x in input().rstrip().split()]
-    stanby = set()
+    stanby = HeapDict()
+    # print(stanby.d)
     # on = []
     # heapify(on)
     # heapify(stanby)
@@ -33,10 +34,10 @@ def main():
     for i in range(q):
         qq = qs[i]
         if qq[0] == 1:
-            stanby.add(cnt1)
+            stanby.insert(cnt1)
             cnt1 += 1
         elif qq[0] == 3:
-            print(min(stanby))
+            print(stanby.min())
         elif qq[0] == 2:
             x = qq[1]
             stanby.remove(x)
@@ -123,6 +124,48 @@ def runLengthEncodeToString(S: str) -> str:
     for k, v in grouped:
         res += k + str(len(list(v)))
     return res
+
+
+class HeapDict:
+    # cf.https://tsubo.hatenablog.jp/entry/2020/06/15/124657
+    # O(logN)で挿入削除,O(1)でmin,exist?
+    # 二分探索ムリ
+    # multisetの代わり
+    def __init__(self):
+        self.h = []
+        self.d = dict()
+
+    def insert(self, x):
+        heappush(self.h, x)
+        if x not in self.d:
+            self.d[x] = 1
+        else:
+            self.d[x] += 1
+
+    def remove(self, x):
+        if x not in self.d or self.d[x] == 0:
+            print(x, "is not in HeapDict")
+            exit()
+        else:
+            self.d[x] -= 1
+
+        while len(self.h) != 0:
+            if self.d[self.h[0]] == 0:
+                heappop(self.h)
+            else:
+                break
+
+    def is_exist(self, x):
+        if x in self.d and self.d[x] != 0:
+            return True
+        else:
+            return False
+
+    def get_min(self):
+        return self.h[0]
+
+    def min(self):
+        return self.get_min()
 
 
 if __name__ == '__main__':

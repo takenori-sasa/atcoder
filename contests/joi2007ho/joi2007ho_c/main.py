@@ -22,7 +22,21 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    cord = set()
+    for i in range(n):
+        x, y = [int(_x) for _x in input().rstrip().split()]
+        cord.add((x, y))
+    size = 0
+    for v, w in combinations(cord, 2):
+        x, y = v
+        a, b = w
+        diffx, diffy = x-a, y-b
+        if (x+diffy, y-diffx) in cord and (a+diffy, b-diffx) in cord:
+            size = max(size, pow(diffx, 2)+pow(diffy, 2))
+
+        elif (x-diffy, y+diffx) in cord and (a-diffy, b+diffx) in cord:
+            size = max(size, pow(diffx, 2)+pow(diffy, 2))
+    print(size)
 
 
 '''
