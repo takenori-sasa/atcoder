@@ -24,32 +24,17 @@ def main():
     n, m = [int(_x) for _x in input().rstrip().split()]
     a = [int(_x) for _x in input().rstrip().split()]
     b = [int(_x) for _x in input().rstrip().split()]
-    a_idx = {int(_x): i for i, _x in enumerate(a)}
-    ac_idx = {}
-    b_idx = {int(_x): i for i, _x in enumerate(b)}
-    bc_idx = {}
-    # print(b_idx)
     c = a+b
-    heapify(c)
-    cnt = 1
-    while len(c) > 0:
-        d = heappop(c)
-        if d in a:
-            ac_idx[a_idx[d]] = str(cnt)
-            cnt += 1
-        else:
-            bc_idx[b_idx[d]] = str(cnt)
-            cnt += 1
-
-    # ac = []
-    # for i in range(n):
-    #     ac.append(str(ac_idx[i]))
-    # print(' '.join(ac))
-    # bc = []
-    # for i in range(m):
-    #     bc.append(str(bc_idx[i]))
-    print(' '.join(ac_idx.values()))
-    print(' '.join(bc_idx.values()))
+    c.sort()
+    d = {x: str(i+1) for i, x in enumerate(c)}
+    ans = []
+    bns = []
+    for aa in a:
+        ans.append(d[aa])
+    for bb in b:
+        bns.append(d[bb])
+    print(' '.join(ans))
+    print(' '.join(bns))
 
 
 '''

@@ -3,6 +3,7 @@
 import sys
 from bisect import bisect_left, bisect_right
 import math
+import copy
 from itertools import permutations, combinations
 INF = float('inf')
 MOD = 10**9+7
@@ -15,8 +16,46 @@ MOD = 10**9+7
 
 def main():
     n, k = list(map(int, input().split()))
+    a = {i: int(x)for i, x in enumerate(input().split())}
+    highest = {0: 0}
+    high = a[0]
+    for i in range(1, n):
+        if a[highest[i-1]] <= a[i]:
+            highest[i] = i
+            # high = a[i]
+        else:
+            highest[i] = highest[i-1]
+    # print(highest)
+    ans = INF
+    # print(list(a.values()))
 
-    a = list(map(int, input().split()))
+    for i in range(pow(2, n)):
+        seen = set()
+        for j in range(n):
+            if i >> j & 1:
+                seen.add(j)
+        if len(seen) < k:
+            continue
+        # print(len(seen), seen)
+        b = copy.deepcopy(a)
+        bighest = copy.deepcopy(highest)
+        cost = 0
+        for j in range(n):
+            if i >> j & 1:
+                if j == bighest[j]:
+                    continue
+                cost += b[bighest[j]]+1-b[j]
+                b[j] = b[bighest[j]]+1
+                # bighest[j] = j
+                for k in range(1, n):
+                    if b[bighest[k-1]] <= b[k]:
+                        bighest[k] = k
+                        # high = a[i]
+                    else:
+                        bighest[k] = bighest[k-1]
+        ans = min(ans, cost)
+        # print(seen, list(b.values()))
+    print(ans)
 
 
 '''

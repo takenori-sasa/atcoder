@@ -21,8 +21,17 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
+
     n = int(input().rstrip())
     a = [int(_x) for _x in input().rstrip().split()]
+    cnt = {i: 0 for i in range(1, n+1)}
+    for i in a:
+        cnt[i] += 1
+    # print(cnt)
+    for i in cnt:
+        if cnt[i] == 3:
+            print(i)
+            return
 
 
 '''

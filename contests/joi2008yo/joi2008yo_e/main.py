@@ -21,8 +21,27 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    r, c = [int(_x) for _x in input().rstrip().split()]
+    mochi = {}
+    for i in range(r):
+        m = [int(_x) for _x in input().rstrip().split()]
+        # mochi[i] = {}
+        for j in range(c):
+            mochi[(i, j)] = m[j]
+    # print(*mochi, sep="\n")
+    ans = 0
+    for i in range(pow(2, r)):
+        cnt = 0
+        for j in range(c):
+            r_cnt = {0: 0, 1: 0}
+            for k in range(r):
+                if i >> k & 1:
+                    r_cnt[mochi[(k, j)] ^ 1] += 1
+                else:
+                    r_cnt[mochi[(k, j)]] += 1
+            cnt += max(r_cnt[0], r_cnt[1])
+        ans = max(ans, cnt)
+    print(ans)
 
 
 '''
