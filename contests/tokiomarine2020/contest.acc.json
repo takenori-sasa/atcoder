@@ -20,31 +20,56 @@
       "id": "tokiomarine2020_b",
       "label": "B",
       "title": "Tag",
-      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_b"
+      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_b",
+      "directory": {
+        "path": "tokiomarine2020_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "tokiomarine2020_c",
       "label": "C",
       "title": "Lamps",
-      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_c"
+      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_c",
+      "directory": {
+        "path": "tokiomarine2020_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "tokiomarine2020_d",
       "label": "D",
       "title": "Knapsack Queries on a tree",
-      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_d"
+      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_d",
+      "directory": {
+        "path": "tokiomarine2020_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "tokiomarine2020_e",
       "label": "E",
       "title": "O(rand)",
-      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_e"
+      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_e",
+      "directory": {
+        "path": "tokiomarine2020_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     },
     {
       "id": "tokiomarine2020_f",
       "label": "F",
       "title": "Triangles",
-      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_f"
+      "url": "https://atcoder.jp/contests/tokiomarine2020/tasks/tokiomarine2020_f",
+      "directory": {
+        "path": "tokiomarine2020_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
     }
   ]
 }
