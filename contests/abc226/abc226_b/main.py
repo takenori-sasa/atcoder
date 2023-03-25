@@ -22,7 +22,11 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    l = set()
+    for i in range(n):
+        a = tuple(int(_x) for _x in input().rstrip().split())
+        l.add(a[1:])
+    print(len(l))
 
 
 '''

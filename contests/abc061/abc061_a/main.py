@@ -20,8 +20,11 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input())
-    a = [int(_x) for _x in input().split()]
+    a, b, c = [int(_x) for _x in input().split()]
+    ans = "No"
+    if a <= c and c <= b:
+        ans = "Yes"
+    print(ans)
 
 
 '''

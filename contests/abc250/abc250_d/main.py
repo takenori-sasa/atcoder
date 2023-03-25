@@ -21,7 +21,7 @@ def main():
     for i in range(len(p)):
         q = p[i]**3
         r_idx = bisect_right(p, min(p[i]-1, n/q))
-        print(p[i], n/q, r_idx)
+        # print(p[i], n/q, r_idx)
         cnt += r_idx
 
     print(cnt)

@@ -22,11 +22,37 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n, m = [int(_x) for _x in input().rstrip().split()]
-    pole = []
+    cylinder = {}
     for i in range(m):
         k = int(input().rstrip())
-        a = [int(_x) for _x in input().rstrip().split()]
-        pole.append(a)
+        a = [int(_x)-1 for _x in input().rstrip().split()]
+        cylinder[i] = (a)
+    tail = {i: [] for i in range(2*n)}
+    for i in range(m):
+        tail[cylinder[i][-1]].append((i))
+    # print(tail)
+    while True:
+        for i in tail:
+            t = tail[i]
+            if len(t) == 2:
+                first = t.pop()
+                cylinder[first].pop()
+                first = t.pop()
+                cylinder[first].pop()
+        # print(tail)
+        is_continue = False
+        for i in tail:
+            if len(tail[i]) == 2:
+                is_continue = True
+        # print(is_continue)
+        if not is_continue:
+            break
+    for i in tail:
+        if len(tail[i]) == 1:
+            print('No')
+            return
+    print('Yes')
+    # print(tail)
 
 
 '''
