@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # https://atcoder.jp/contests/abc233/tasks/abc233_c
-from itertools import permutations, combinations, accumulate, groupby
+from itertools import permutations, combinations, accumulate, groupby, product
 import sys
 from bisect import bisect_left, bisect_right
 import math
 from heapq import heappush, heappop
-from collections import deque
+from collections import defaultdict, deque
 INF = float('inf')
 MOD = 998244353
 # MOD = pow(10, 9)+7
@@ -21,8 +21,39 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    n, x = [int(_x) for _x in input().rstrip().split()]
+    box = []
+    num = []
+    p = []
+    for i in range(n):
+        l = [int(_x) for _x in input().rstrip().split()]
+        l = l[1:]
+        box.append(l)
+    pro = [1]
+    for i in range(n):
+        tmp = []
+        for p in pro:
+            for q in box[i]:
+                tmp.append(p*q)
+        pro = tmp
+    # print(pro)
+    cnt = 0
+    for p in pro:
+        if p == x:
+            cnt += 1
+    print(cnt)
+
+
+def make_divisors(n):
+    lower_divisors, upper_divisors = [], []
+    i = 1
+    while i*i <= n:
+        if n % i == 0:
+            lower_divisors.append(i)
+            if i != n // i:
+                upper_divisors.append(n//i)
+        i += 1
+    return lower_divisors + upper_divisors[::-1]
 
 
 '''

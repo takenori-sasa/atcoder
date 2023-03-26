@@ -22,10 +22,30 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n = int(input().rstrip())
-    a = []
-    for i in range(n):
+    a = {}
+    for i in range(2*n-1):
         aa = [int(_x) for _x in input().rstrip().split()]
-        a.append(aa)
+        # print(aa)
+        for j in range(len(aa)):
+            a[(i, i+1+j)] = aa[j]
+            a[(i+1+j, i)] = aa[j]
+    # print(len(a))
+    l = [i for i in range(2*n)]
+    max_amuse = 0
+    # print(len(list(combinations(l, n))))
+    for p in permutations(l, n):
+        # lp = list(p)
+        rest = []
+        for i in range(2*n):
+            if i not in p:
+                rest.append(i)
+        amuse = 0
+        for i in range(n):
+            amuse ^= a[(p[i], rest[i])]
+            # print(amuse, a[(p[i], rest[i])])
+        # print(p, rest)
+        max_amuse = max(max_amuse, amuse)
+    print(max_amuse)
 
 
 '''
