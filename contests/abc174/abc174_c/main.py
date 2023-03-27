@@ -21,8 +21,22 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    k = int(input().rstrip())
+    if k % 2 == 0:
+        print(-1)
+        return
+    mod = 7 % k
+    mods = set([7 % k])
+    for i in range(pow(10, 6)+4):
+        if mod == 0:
+            print(i+1)
+            return
+        mod = (7+mod*10) % k
+        if mod in mods:
+            print(-1)
+            return
+        mods.add(mod)
+        # print(mods)
 
 
 '''

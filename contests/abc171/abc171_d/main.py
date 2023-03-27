@@ -22,6 +22,23 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 def main():
     n = int(input().rstrip())
     a = [int(_x) for _x in input().rstrip().split()]
+    ans = sum(a)
+    cnt = {}
+    for c in a:
+        if c not in cnt:
+            cnt[c] = 0
+        cnt[c] += 1
+    nq = int(input().rstrip())
+    for _ in range(nq):
+        b, c = [int(_x) for _x in input().rstrip().split()]
+        if c not in cnt:
+            cnt[c] = 0
+        if b in cnt:
+            ans -= b*cnt[b]
+            ans += c*cnt[b]
+            cnt[c] += cnt[b]
+            del cnt[b]
+        print(ans)
 
 
 '''

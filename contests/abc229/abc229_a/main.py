@@ -14,6 +14,16 @@ MOD = 998244353
 
 
 def main():
+    a, b = [int(_x) for _x in input().split()]
+    a = list(str(a))
+    b = list(str(b))
+    a = [int(_x) for _x in a]
+    b = [int(_x) for _x in b]
+    for i in range(3):
+        if a[i]+b[i] >= 10:
+            print('Hard')
+            return
+    print('Easy')
 
 
 '''
