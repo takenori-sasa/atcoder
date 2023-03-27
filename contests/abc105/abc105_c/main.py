@@ -21,8 +21,19 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    m = int("10"*20, 2)
+    print(format(int(input())+m ^ m, "0b"))
+
+
+def decimal2nth(num: int, base: int):
+    _num_ = abs(num)
+    s = ""
+    while 1:
+        s += str(num % abs(base))
+        num = num//base
+        if num == 0:
+            break
+    return print(s[::-1])
 
 
 '''

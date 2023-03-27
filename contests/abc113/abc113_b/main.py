@@ -22,7 +22,16 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    t, a = [int(_x) for _x in input().rstrip().split()]
+    h = [int(_x) for _x in input().rstrip().split()]
+    dist = INF
+    num = 0
+    for i in range(n):
+        ab = abs(t-0.006*h[i]-a)
+        if dist > ab:
+            dist = ab
+            num = i
+    print(num+1)
 
 
 '''

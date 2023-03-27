@@ -14,9 +14,17 @@ MOD = 998244353
 
 
 def main():
-    n = int(input())
-    a = [int(_x) for _x in input().split()]
-    grid = [[int(_x) for _x in input().split()] for _ in range(n)]
+    a, b = [int(_x) for _x in input().split()]
+    a = list(str(a))[::-1]
+    b = list(str(b))[::-1]
+    a = [int(_x) for _x in a]
+    b = [int(_x) for _x in b]
+    # print(len(a), len(b))
+    for i in range(min(len(a), len(b))):
+        if a[i]+b[i] >= 10:
+            print('Hard')
+            return
+    print('Easy')
 
 
 '''

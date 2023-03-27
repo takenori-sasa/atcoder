@@ -14,9 +14,6 @@ MOD = 998244353
 
 
 def main():
-    n = int(input())
-    a = [int(_x) for _x in input().split()]
-    grid = [[int(_x) for _x in input().split()] for _ in range(n)]
 
 
 '''

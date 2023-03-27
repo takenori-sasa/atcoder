@@ -1,0 +1,75 @@
+{
+  "contest": {
+    "id": "agc036",
+    "title": "AtCoder Grand Contest 036",
+    "url": "https://atcoder.jp/contests/agc036"
+  },
+  "tasks": [
+    {
+      "id": "agc036_a",
+      "label": "A",
+      "title": "Triangle",
+      "url": "https://atcoder.jp/contests/agc036/tasks/agc036_a",
+      "directory": {
+        "path": "agc036_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc036_b",
+      "label": "B",
+      "title": "Do Not Duplicate",
+      "url": "https://atcoder.jp/contests/agc036/tasks/agc036_b",
+      "directory": {
+        "path": "agc036_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc036_c",
+      "label": "C",
+      "title": "GP 2",
+      "url": "https://atcoder.jp/contests/agc036/tasks/agc036_c",
+      "directory": {
+        "path": "agc036_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc036_d",
+      "label": "D",
+      "title": "Negative Cycle",
+      "url": "https://atcoder.jp/contests/agc036/tasks/agc036_d",
+      "directory": {
+        "path": "agc036_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc036_e",
+      "label": "E",
+      "title": "ABC String",
+      "url": "https://atcoder.jp/contests/agc036/tasks/agc036_e",
+      "directory": {
+        "path": "agc036_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "agc036_f",
+      "label": "F",
+      "title": "Square Constraints",
+      "url": "https://atcoder.jp/contests/agc036/tasks/agc036_f",
+      "directory": {
+        "path": "agc036_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
