@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc258/tasks/abc258_b
+# https://atcoder.jp/contests/arc152/tasks/arc152_b
 from itertools import permutations, combinations, accumulate, groupby
 import sys
 import os
@@ -23,60 +23,7 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n = int(input().rstrip())
-    grid = []
-    for i in range(n):
-        grid.append(list(input().rstrip()))
-
-    trans = list(zip(*grid))
-    ans = 0
-    # print(grid[0][0])
-    for i in range(n):
-        hori = grid[i]
-        ver = list(trans[i])
-        # print(''.join(hori), ''.join(ver))
-        hori += hori
-        hori += hori
-        ver += ver
-        ver += ver
-        revh = hori[::-1]
-        revv = ver[::-1]
-        seq = []
-        seq.append(hori)
-        seq.append(ver)
-        seq.append(revh)
-        seq.append(revv)
-
-        for k in range(2*n):
-            for se in seq:
-                ans = max(ans, int(''.join(se[k:k+n])))
-    for i in range(n):
-        hori = ''
-        ver = ''
-        for j in range(n):
-            hori += grid[(i+j) % n][j % n]
-            ver += grid[(i-j) % n][j % n]
-        # print(''.join(hori), ''.join(ver))
-        hori += hori
-        hori += hori
-        ver += ver
-        ver += ver
-        revh = hori[::-1]
-        revv = ver[::-1]
-        seq = []
-        seq.append(hori)
-        seq.append(ver)
-        seq.append(revh)
-        seq.append(revv)
-
-        for k in range(2*n):
-            for se in seq:
-                ans = max(ans, int(''.join(se[k:k+n])))
-        # print(hori, ver)
-
-    # ans = 'No'
-    # if max(a, c) <= min(b, d):
-    #     ans = 'Yes'
-    print(ans)
+    a = [int(_x) for _x in input().rstrip().split()]
 
 
 '''
