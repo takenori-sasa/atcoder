@@ -26,12 +26,27 @@ def main():
     b = [int(_x) for _x in input().rstrip().split()]
     a.reverse()
     b.reverse()
-    sa = {0: set([])}
-    sb = {0: set([])}
+    onlya = {}
+    onlyb = {}
+    ab = {}
+    if a[0] != b[0]:
+        onlya[0] = set([a[0]])
+        onlya[0] = set([b[0]])
+    else:
+        ab[0] = set([a[0]])
     for i in range(1, n+1):
-        sa[i] = sa[i-1] | set([a.pop()])
-        sb[i] = sb[i-1] | set([b.pop()])
-    # print(a, b)
+        aa = a.pop()
+        bb = b.pop()
+        if aa == bb:
+            ab[i] = set([aa]) | ab[i-1]
+            onlya[i] = onlya[i-1]
+            onlyb[i] = onlyb[i-1]
+        elif aa in onlyb:
+            onlyb[i] = onlyb[i-1]-set([aa])
+            ab[i]
+        # sa[i] = sa[i-1] | set([a.pop()])
+        # sb[i] = sb[i-1] | set([b.pop()])
+        # print(a, b)
     q = int(input().rstrip())
     for _ in range(q):
         x, y = [int(_x) for _x in input().rstrip().split()]

@@ -7,16 +7,19 @@ from itertools import permutations, combinations
 INF = float('inf')
 MOD = 998244353
 '''
-    s = input()
     s,t = list(map(str, input().split()))
     field = [''.join(input().split()) for _ in range(n)]
 '''
 
 
 def main():
-    n = int(input())
-    a = [int(_x) for _x in input().split()]
-    grid = [[int(_x) for _x in input().split()] for _ in range(n)]
+    s = input()
+    t = input()
+    ans = 0
+    for i in range(3):
+        if s[i] == t[i]:
+            ans += 1
+    print(ans)
 
 
 '''

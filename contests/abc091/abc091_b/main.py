@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/arc152/tasks/arc152_a
+# https://atcoder.jp/contests/abc091/tasks/abc091_b
 from itertools import permutations, combinations, accumulate, groupby
 import sys
 import os
@@ -22,18 +22,22 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n, l = [int(_x) for _x in input().rstrip().split()]
-    aa = [int(_x) for _x in input().rstrip().split()]
-    for a in aa:
-        if l <= 1:
-            if a == 1:
-                continue
-            else:
-                print('No')
-                return
-        l -= a+1
-        debug(l)
-    print('Yes')
+    n = int(input().rstrip())
+    blue = {}
+    for i in range(n):
+        s = input().rstrip()
+        if s not in blue:
+            blue[s] = 0
+        blue[s] += 1
+    m = int(input().rstrip())
+    for i in range(m):
+        t = input().rstrip()
+        if t in blue:
+            blue[t] = max(blue[t]-1, 0)
+    ans = 0
+    for s in blue:
+        ans = max(ans, blue[s])
+    print(ans)
 
 
 '''
@@ -93,7 +97,7 @@ def lcm(x: int, y: int) -> int:
     return (x * y) // math.gcd(x, y)
 
 
-def debug(*args, end="\n"):
+def debugger(*args, end="\n"):
     if os.environ.get('DLOCAL') == '1':
         print(*args, end=end)
 

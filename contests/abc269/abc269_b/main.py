@@ -21,8 +21,23 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    n = int(input().rstrip())
-    a = [int(_x) for _x in input().rstrip().split()]
+    grid = [''.join(input().rstrip().split()) for _ in range(10)]
+    # print(grid)
+    height = set()
+    for i in range(10):
+        if '#' in grid[i]:
+            height.add(i+1)
+    a = min(height)
+    b = max(height)
+    print(a, b)
+    grid = list(zip(*grid))
+    height = set()
+    for i in range(10):
+        if '#' in grid[i]:
+            height.add(i+1)
+    a = min(height)
+    b = max(height)
+    print(a, b)
 
 
 '''
