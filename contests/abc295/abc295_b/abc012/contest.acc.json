@@ -1,0 +1,53 @@
+{
+  "contest": {
+    "id": "abc012",
+    "title": "AtCoder Beginner Contest 012",
+    "url": "https://atcoder.jp/contests/abc012"
+  },
+  "tasks": [
+    {
+      "id": "abc012_1",
+      "label": "A",
+      "title": "スワップ",
+      "url": "https://atcoder.jp/contests/abc012/tasks/abc012_1",
+      "directory": {
+        "path": "abc012_1",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc012_2",
+      "label": "B",
+      "title": "入浴時間",
+      "url": "https://atcoder.jp/contests/abc012/tasks/abc012_2",
+      "directory": {
+        "path": "abc012_2",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc012_3",
+      "label": "C",
+      "title": "九九足し算",
+      "url": "https://atcoder.jp/contests/abc012/tasks/abc012_3",
+      "directory": {
+        "path": "abc012_3",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc012_4",
+      "label": "D",
+      "title": "バスと避けられない運命",
+      "url": "https://atcoder.jp/contests/abc012/tasks/abc012_4",
+      "directory": {
+        "path": "abc012_4",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
