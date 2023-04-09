@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc173/tasks/abc173_c
+# https://atcoder.jp/contests/arc020/tasks/arc020_2
 from itertools import permutations, combinations, accumulate, groupby
 import sys
+import os
 from bisect import bisect_left, bisect_right
 import math
 from heapq import heappush, heappop
@@ -21,21 +22,37 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    h, w, k = [int(_x) for _x in input().rstrip().split()]
-    field = [''.join(input().rstrip().split()) for _ in range(h)]
-    cnt = 0
-    for i in range(pow(2, h)):
-        for j in range(pow(2, w)):
-            black = 0
-            for m in range(h):
-                for l in range(w):
-                    if i >> m & 1 or j >> l & 1:
-                        continue
-                    elif field[m][l] == '#':
-                        black += 1
-            if black == k:
-                cnt += 1
-    print(cnt)
+    n, c = [int(_x) for _x in input().rstrip().split()]
+    a = []
+    even = {}
+    odd = {}
+    for i in range(n):
+        a = int(input())
+        if i % 2 == 0:
+            if a not in even:
+                even[a] = 0
+            even[a] += 1
+        else:
+            if a not in odd:
+                odd[a] = 0
+            odd[a] += 1
+    even = sorted(even.items(), key=lambda x: x[1], reverse=True)
+    odd = sorted(odd.items(), key=lambda x: x[1], reverse=True)
+    # debugger(even)
+    # debugger(odd)
+    most_even = even.pop()
+    most_odd = odd.pop()
+    if most_even[0] != most_odd[0]:
+        pass
+    else:
+        if len(odd) == 0 and len(even) == 0:
+            print((n+1)//2*c)
+            return
+        elif most_even[1] > most_odd[1] or len(even) == 0:
+            most_odd = odd.pop()
+        else:
+            most_even = even.pop()
+    print(c*((n+1)//2-most_even[1]+(n+1)//2-most_odd[1]))
 
 
 '''
@@ -93,6 +110,11 @@ def lcm(x: int, y: int) -> int:
     lcm
     '''
     return (x * y) // math.gcd(x, y)
+
+
+def debugger(*args, end="\n"):
+    if os.environ.get('DLOCAL') == '1':
+        print(*args, end=end)
 
 
 def runLengthEncode(S: str) -> "List[tuple(str, int)]":

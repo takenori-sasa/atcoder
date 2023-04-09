@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc173/tasks/abc173_c
+# https://atcoder.jp/contests/abc003/tasks/abc003_3
 from itertools import permutations, combinations, accumulate, groupby
 import sys
+import os
 from bisect import bisect_left, bisect_right
 import math
 from heapq import heappush, heappop
@@ -21,21 +22,8 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    h, w, k = [int(_x) for _x in input().rstrip().split()]
-    field = [''.join(input().rstrip().split()) for _ in range(h)]
-    cnt = 0
-    for i in range(pow(2, h)):
-        for j in range(pow(2, w)):
-            black = 0
-            for m in range(h):
-                for l in range(w):
-                    if i >> m & 1 or j >> l & 1:
-                        continue
-                    elif field[m][l] == '#':
-                        black += 1
-            if black == k:
-                cnt += 1
-    print(cnt)
+    n = int(input().rstrip())
+    a = [int(_x) for _x in input().rstrip().split()]
 
 
 '''
@@ -93,6 +81,11 @@ def lcm(x: int, y: int) -> int:
     lcm
     '''
     return (x * y) // math.gcd(x, y)
+
+
+def debugger(*args, end="\n"):
+    if os.environ.get('DLOCAL') == '1':
+        print(*args, end=end)
 
 
 def runLengthEncode(S: str) -> "List[tuple(str, int)]":
