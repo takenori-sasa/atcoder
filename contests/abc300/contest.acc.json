@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc300",
+    "title": "ユニークビジョンプログラミングコンテスト2023 春 (AtCoder Beginner Contest 300)",
+    "url": "https://atcoder.jp/contests/abc300"
+  },
+  "tasks": [
+    {
+      "id": "abc300_a",
+      "label": "A",
+      "title": "N-choice question",
+      "url": "https://atcoder.jp/contests/abc300/tasks/abc300_a",
+      "directory": {
+        "path": "abc300_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc300_b",
+      "label": "B",
+      "title": "Same Map in the RPG World",
+      "url": "https://atcoder.jp/contests/abc300/tasks/abc300_b",
+      "directory": {
+        "path": "abc300_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc300_c",
+      "label": "C",
+      "title": "Cross",
+      "url": "https://atcoder.jp/contests/abc300/tasks/abc300_c",
+      "directory": {
+        "path": "abc300_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc300_d",
+      "label": "D",
+      "title": "AABCC",
+      "url": "https://atcoder.jp/contests/abc300/tasks/abc300_d",
+      "directory": {
+        "path": "abc300_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc300_e",
+      "label": "E",
+      "title": "Dice Product 3",
+      "url": "https://atcoder.jp/contests/abc300/tasks/abc300_e",
+      "directory": {
+        "path": "abc300_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc300_f",
+      "label": "F",
+      "title": "More Holidays",
+      "url": "https://atcoder.jp/contests/abc300/tasks/abc300_f",
+      "directory": {
+        "path": "abc300_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc300_g",
+      "label": "G",
+      "title": "P-smooth number",
+      "url": "https://atcoder.jp/contests/abc300/tasks/abc300_g",
+      "directory": {
+        "path": "abc300_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc300_h",
+      "label": "Ex",
+      "title": "Fibonacci: Revisited",
+      "url": "https://atcoder.jp/contests/abc300/tasks/abc300_h",
+      "directory": {
+        "path": "abc300_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
