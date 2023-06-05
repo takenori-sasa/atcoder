@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc304",
+    "title": "Tokio Marine & Nichido Fire Insurance Programming Contest 2023（AtCoder Beginner Contest 304)",
+    "url": "https://atcoder.jp/contests/abc304"
+  },
+  "tasks": [
+    {
+      "id": "abc304_a",
+      "label": "A",
+      "title": "First Player",
+      "url": "https://atcoder.jp/contests/abc304/tasks/abc304_a",
+      "directory": {
+        "path": "abc304_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc304_b",
+      "label": "B",
+      "title": "Subscribers",
+      "url": "https://atcoder.jp/contests/abc304/tasks/abc304_b",
+      "directory": {
+        "path": "abc304_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc304_c",
+      "label": "C",
+      "title": "Virus",
+      "url": "https://atcoder.jp/contests/abc304/tasks/abc304_c",
+      "directory": {
+        "path": "abc304_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc304_d",
+      "label": "D",
+      "title": "A Piece of Cake",
+      "url": "https://atcoder.jp/contests/abc304/tasks/abc304_d",
+      "directory": {
+        "path": "abc304_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc304_e",
+      "label": "E",
+      "title": "Good Graph",
+      "url": "https://atcoder.jp/contests/abc304/tasks/abc304_e",
+      "directory": {
+        "path": "abc304_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc304_f",
+      "label": "F",
+      "title": "Shift Table",
+      "url": "https://atcoder.jp/contests/abc304/tasks/abc304_f",
+      "directory": {
+        "path": "abc304_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc304_g",
+      "label": "G",
+      "title": "Max of Medians",
+      "url": "https://atcoder.jp/contests/abc304/tasks/abc304_g",
+      "directory": {
+        "path": "abc304_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc304_h",
+      "label": "Ex",
+      "title": "Constrained Topological Sort",
+      "url": "https://atcoder.jp/contests/abc304/tasks/abc304_h",
+      "directory": {
+        "path": "abc304_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
