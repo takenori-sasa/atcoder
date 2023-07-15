@@ -1,15 +1,20 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc305/tasks/abc305_e
-from itertools import permutations, combinations, accumulate, groupby
+# https://atcoder.jp/contests/abc310/tasks/abc310_d
+from itertools import permutations, combinations, accumulate, groupby, product, combinations_with_replacement
 import sys
 import os
 from bisect import bisect_left, bisect_right
 import math
-from heapq import heapify, heappush, heappop
+from heapq import heappush, heappop
 from collections import deque, defaultdict
+import copy
 INF = float('inf')
 MOD = 998244353
-# MOD = pow(10, 9)+7
+MOD10 = 10**9+7
+MOD99 = 998244353
+# MOD = MOD99
+YES = 'Yes'
+NO = 'No'
 DXY4 = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
@@ -22,42 +27,36 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    # n = int(input().rstrip())
-    n, m, k = [int(_x) for _x in input().rstrip().split()]
-    graph = [[] for i in range(n)]
+    n, t, m = [int(_x) for _x in input().rstrip().split()]
+    dl = UnionFind(n)
+    dislike = set()
     for i in range(m):
         a, b = [int(_x) for _x in input().rstrip().split()]
-        a, b = a-1, b-1
-        graph[a].append((b, 1))
-        graph[b].append((a, 1))
-    # debugger(graph)
-    hp = []
-    guard = {}
-    dist = [-1]*n
-    ans = []
-    for i in range(k):
-        p, h = [int(_x) for _x in input().rstrip().split()]
-        p -= 1
-        heappush(hp, (-h, p))
-        dist[p] = h
-    # debugger(hp)
-    while hp:
-        h, u = heappop(hp)
-        h *= -1
-        if dist[u] > h:
-            continue
-        # dist[u] = h
-        h -= 1
-        for nxt, weight in graph[u]:
-            if dist[nxt] < h:
-                dist[nxt] = h
-                if h > 0:
-                    heappush(hp, (-h, nxt))
-        # debugger(h, u, hp)
-    ans.sort()
-    ans = [i+1 for i in range(n) if dist[i] > -1]
-    print(len(ans))
-    print(*ans)
+        dislike.add((b, a))
+        dislike.add((a, b))
+    lots = [[[1]]]
+    for newcomer in range(2, n+1):
+        new_lots = []
+        for teams in lots:
+            tteam = copy.deepcopy(teams)
+            tteam.append([newcomer])
+            new_lots.append(tteam)
+            for num_team in range(len(teams)):
+                is_join = True
+                for member in teams[num_team]:
+                    if (member, newcomer) in dislike:
+                        is_join = False
+                if is_join:
+                    new_teams = copy.deepcopy(teams)
+                    new_teams[num_team].append(newcomer)
+                    new_lots.append(new_teams)
+        # print(new_lots)
+        lots = new_lots
+    ans = 0
+    for lot in lots:
+        if len(lot) == t:
+            ans += 1
+    print(ans)
 
 
 '''
@@ -67,9 +66,45 @@ def main():
     print(*ans, sep="\n")
     tenchi = list(zip(*matrix))
 '''
+# グラフオブジェクトを表すクラス
 
+
+class Graph:
+    def __init__(self, edges, n):
+        self.adjList = [[] for _ in range(n)]
+
+        # は無向グラフにエッジを追加します
+        for (src, dest) in edges:
+            self.adjList[src].append(dest)
+            self.adjList[dest].append(src)
+
+
+# グラフの頂点に色を割り当てる関数
+def colorGraph(graph, n):
+
+    # は、各頂点に割り当てられた色を追跡します
+    result = {}
+
+    # は頂点に1つずつ色を割り当てます
+    for u in range(n):
+
+        # は`u`の隣接する頂点の色をチェックしてセットに保存します
+        assigned = set([result.get(i)
+                       for i in graph.adjList[u] if i in result])
+
+        # は最初のフリーカラーをチェックします
+        color = 1
+        for c in assigned:
+            if color != c:
+                break
+            color = color + 1
+
+        # は、頂点`u`に最初に使用可能な色を割り当てます
+        result[u] = color
 
 # エラトステネスのふるい 篩 素数判定
+
+
 def primes(limit: int, minLimit: int = None):
     if minLimit and (minLimit < 0 or minLimit > limit):
         raise ValueError("incorrect minLimit")
@@ -401,9 +436,10 @@ class WeightedUnionFind:
         return self.weight[x] - self.weight[y]
 
 
-class MultiSet:
+class CompressedMultiSet:
     # n: サイズ、compress: 座圧対象list-likeを指定(nは無効)
     # multi: マルチセットか通常のOrderedSetか
+    # まずクエリ先読みして必要な座標洗い出してinitせよ
     def __init__(self, n=0, *, compress=[], multi=True):
         self.multi = multi
         self.inv_compress = sorted(set(compress)) if len(

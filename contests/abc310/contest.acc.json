@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc310",
+    "title": "freee Programming Contest 2023（AtCoder Beginner Contest 310）",
+    "url": "https://atcoder.jp/contests/abc310"
+  },
+  "tasks": [
+    {
+      "id": "abc310_a",
+      "label": "A",
+      "title": "Order Something Else",
+      "url": "https://atcoder.jp/contests/abc310/tasks/abc310_a",
+      "directory": {
+        "path": "abc310_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc310_b",
+      "label": "B",
+      "title": "Strictly Superior",
+      "url": "https://atcoder.jp/contests/abc310/tasks/abc310_b",
+      "directory": {
+        "path": "abc310_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc310_c",
+      "label": "C",
+      "title": "Reversible",
+      "url": "https://atcoder.jp/contests/abc310/tasks/abc310_c",
+      "directory": {
+        "path": "abc310_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc310_d",
+      "label": "D",
+      "title": "Peaceful Teams",
+      "url": "https://atcoder.jp/contests/abc310/tasks/abc310_d",
+      "directory": {
+        "path": "abc310_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc310_e",
+      "label": "E",
+      "title": "NAND repeatedly",
+      "url": "https://atcoder.jp/contests/abc310/tasks/abc310_e",
+      "directory": {
+        "path": "abc310_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc310_f",
+      "label": "F",
+      "title": "Make 10 Again",
+      "url": "https://atcoder.jp/contests/abc310/tasks/abc310_f",
+      "directory": {
+        "path": "abc310_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc310_g",
+      "label": "G",
+      "title": "Takahashi And Pass-The-Ball Game",
+      "url": "https://atcoder.jp/contests/abc310/tasks/abc310_g",
+      "directory": {
+        "path": "abc310_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc310_h",
+      "label": "Ex",
+      "title": "Negative Cost",
+      "url": "https://atcoder.jp/contests/abc310/tasks/abc310_h",
+      "directory": {
+        "path": "abc310_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}

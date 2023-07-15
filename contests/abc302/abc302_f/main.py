@@ -23,31 +23,43 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 def main():
     n, m = [int(_x) for _x in input().rstrip().split()]
-    graph = {}
+    graph = [set() for i in range(n+m)]
+    debugger(graph)
     for i in range(n):
         an = int(input().rstrip())
-        uv = [int(_x) for _x in input().rstrip().split()]
-        for u, v in permutations(uv, 2):
-            if u not in graph:
-                graph[u] = set()
-            if v not in graph:
-                graph[v] = set()
-            graph[u].add(v)
-            graph[v].add(u)
+        uv = [int(_x)-1 for _x in input().rstrip().split()]
+        for u in uv:
+            graph[i].add(n+u)
+            graph[n+u].add(i)
+    dist = [-1]*(n+m)
+    queue = deque([n])
+    dist[n] = 0
+    while queue:
+        q = queue.popleft()
+        for u in graph[q]:
+            if dist[u] != -1:
+                continue
+            dist[u] = dist[q]+1
+            queue.append(u)
+    debugger(dist)
+    if dist[-1] < 0:
+        print(-1)
+    else:
+        print(dist[-1]//2-1)
     # debugger(graph)
-    queue = deque([1])
-    dist = {i: -1 for i in range(1, m+1)}
-    dist[1] = 0
-    while len(queue) > 0:
-        st = queue.popleft()
-        for c in graph[st]:
-            if dist[c] == -1:
-                queue.append(c)
-                dist[c] = 1+dist[st]
-        if dist[m] != -1:
-            print(dist[m]-1)
-            return
-    print(-1)
+    # queue = deque([1])
+    # dist = {i: -1 for i in range(1, m+1)}
+    # dist[1] = 0
+    # while len(queue) > 0:
+    #     st = queue.popleft()
+    #     for c in graph[st]:
+    #         if dist[c] == -1:
+    #             queue.append(c)
+    #             dist[c] = 1+dist[st]
+    #     if dist[m] != -1:
+    #         print(dist[m]-1)
+    #         return
+    # print(-1)
 
 
 '''

@@ -1,20 +1,23 @@
 # -*- coding: utf-8 -*-
-# https://atcoder.jp/contests/abc305/tasks/abc305_e
+# https://atcoder.jp/contests/abc310/tasks/abc310_e
 from itertools import permutations, combinations, accumulate, groupby
 import sys
 import os
 from bisect import bisect_left, bisect_right
 import math
-from heapq import heapify, heappush, heappop
+from heapq import heappush, heappop
 from collections import deque, defaultdict
 INF = float('inf')
 MOD = 998244353
-# MOD = pow(10, 9)+7
+MOD10 = 10**9+7
+MOD99 = 998244353
+# MOD = MOD99
+YES = 'Yes'
+NO = 'No'
 DXY4 = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 '''
-    s = input().rstrip()
     s,t = [c for c in input().rstrip().split()]
     field = [''.join(input().rstrip().split()) for _ in range(n)]
     grid = [[int(_x) for _x in input().rstrip().split()] for _ in range(n)]
@@ -22,42 +25,29 @@ DXY8 = [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
 
 
 def main():
-    # n = int(input().rstrip())
-    n, m, k = [int(_x) for _x in input().rstrip().split()]
-    graph = [[] for i in range(n)]
-    for i in range(m):
-        a, b = [int(_x) for _x in input().rstrip().split()]
-        a, b = a-1, b-1
-        graph[a].append((b, 1))
-        graph[b].append((a, 1))
-    # debugger(graph)
-    hp = []
-    guard = {}
-    dist = [-1]*n
-    ans = []
-    for i in range(k):
-        p, h = [int(_x) for _x in input().rstrip().split()]
-        p -= 1
-        heappush(hp, (-h, p))
-        dist[p] = h
-    # debugger(hp)
-    while hp:
-        h, u = heappop(hp)
-        h *= -1
-        if dist[u] > h:
-            continue
-        # dist[u] = h
-        h -= 1
-        for nxt, weight in graph[u]:
-            if dist[nxt] < h:
-                dist[nxt] = h
-                if h > 0:
-                    heappush(hp, (-h, nxt))
-        # debugger(h, u, hp)
-    ans.sort()
-    ans = [i+1 for i in range(n) if dist[i] > -1]
-    print(len(ans))
-    print(*ans)
+    n = int(input().rstrip())
+    s = input().rstrip()
+    n0 = 0
+    n1 = 0
+    ans = 0
+    # if s[0] == 1:
+    #     n1 += 1
+    # else:
+    #     n0 += 1
+    # ans += n1
+    # if len(s) == 1:
+    #     print(ans)
+    #     return
+    # s = s[1:]
+    for c in s:
+        if c == '0':
+            n1 += n0
+            n0 = 1
+        else:
+            n0, n1 = n1, n0
+            n1 += 1
+        ans += n1
+    print(ans)
 
 
 '''
@@ -401,9 +391,10 @@ class WeightedUnionFind:
         return self.weight[x] - self.weight[y]
 
 
-class MultiSet:
+class CompressedMultiSet:
     # n: サイズ、compress: 座圧対象list-likeを指定(nは無効)
     # multi: マルチセットか通常のOrderedSetか
+    # まずクエリ先読みして必要な座標洗い出してinitせよ
     def __init__(self, n=0, *, compress=[], multi=True):
         self.multi = multi
         self.inv_compress = sorted(set(compress)) if len(
