@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc317",
+    "title": "GAMEFREAK Programming Contest 2023 (AtCoder Beginner Contest 317)",
+    "url": "https://atcoder.jp/contests/abc317"
+  },
+  "tasks": [
+    {
+      "id": "abc317_a",
+      "label": "A",
+      "title": "Potions",
+      "url": "https://atcoder.jp/contests/abc317/tasks/abc317_a",
+      "directory": {
+        "path": "abc317_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc317_b",
+      "label": "B",
+      "title": "MissingNo.",
+      "url": "https://atcoder.jp/contests/abc317/tasks/abc317_b",
+      "directory": {
+        "path": "abc317_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc317_c",
+      "label": "C",
+      "title": "Remembering the Days",
+      "url": "https://atcoder.jp/contests/abc317/tasks/abc317_c",
+      "directory": {
+        "path": "abc317_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc317_d",
+      "label": "D",
+      "title": "President",
+      "url": "https://atcoder.jp/contests/abc317/tasks/abc317_d",
+      "directory": {
+        "path": "abc317_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc317_e",
+      "label": "E",
+      "title": "Avoid Eye Contact",
+      "url": "https://atcoder.jp/contests/abc317/tasks/abc317_e",
+      "directory": {
+        "path": "abc317_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc317_f",
+      "label": "F",
+      "title": "Nim",
+      "url": "https://atcoder.jp/contests/abc317/tasks/abc317_f",
+      "directory": {
+        "path": "abc317_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc317_g",
+      "label": "G",
+      "title": "Rearranging",
+      "url": "https://atcoder.jp/contests/abc317/tasks/abc317_g",
+      "directory": {
+        "path": "abc317_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc317_h",
+      "label": "Ex",
+      "title": "Walk",
+      "url": "https://atcoder.jp/contests/abc317/tasks/abc317_h",
+      "directory": {
+        "path": "abc317_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}
