@@ -30,6 +30,7 @@ def main():
     h, w = [int(_x) for _x in input().rstrip().split()]
     field = [list(''.join(input().rstrip().split())) for _ in range(h)]
     obs = '#<>^v'
+    debugger(field)
     for i in range(h):
         is_seen = False
         for j in range(w):
@@ -66,7 +67,7 @@ def main():
             elif is_seen:
                 if field[i][j] in obs:
                     is_seen = False
-    debugger(field)
+    # debugger(field)
     # for i in range(h):
     #     print(''.join(field[i]))
     obs += '!'

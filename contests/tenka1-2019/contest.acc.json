@@ -1,0 +1,53 @@
+{
+  "contest": {
+    "id": "tenka1-2019",
+    "title": "Tenka1 Programmer Contest 2019",
+    "url": "https://atcoder.jp/contests/tenka1-2019"
+  },
+  "tasks": [
+    {
+      "id": "tenka1_2019_c",
+      "label": "C",
+      "title": "Stones",
+      "url": "https://atcoder.jp/contests/tenka1-2019/tasks/tenka1_2019_c",
+      "directory": {
+        "path": "tenka1_2019_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "tenka1_2019_d",
+      "label": "D",
+      "title": "Three Colors",
+      "url": "https://atcoder.jp/contests/tenka1-2019/tasks/tenka1_2019_d",
+      "directory": {
+        "path": "tenka1_2019_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "tenka1_2019_e",
+      "label": "E",
+      "title": "Polynomial Divisors",
+      "url": "https://atcoder.jp/contests/tenka1-2019/tasks/tenka1_2019_e",
+      "directory": {
+        "path": "tenka1_2019_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "tenka1_2019_f",
+      "label": "F",
+      "title": "Banned X",
+      "url": "https://atcoder.jp/contests/tenka1-2019/tasks/tenka1_2019_f",
+      "directory": {
+        "path": "tenka1_2019_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}

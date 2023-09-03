@@ -1,0 +1,97 @@
+{
+  "contest": {
+    "id": "abc298",
+    "title": "TOYOTA MOTOR CORPORATION Programming Contest 2023#1 (AtCoder Beginner Contest 298)",
+    "url": "https://atcoder.jp/contests/abc298"
+  },
+  "tasks": [
+    {
+      "id": "abc298_a",
+      "label": "A",
+      "title": "Job Interview",
+      "url": "https://atcoder.jp/contests/abc298/tasks/abc298_a",
+      "directory": {
+        "path": "abc298_a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc298_b",
+      "label": "B",
+      "title": "Coloring Matrix",
+      "url": "https://atcoder.jp/contests/abc298/tasks/abc298_b",
+      "directory": {
+        "path": "abc298_b",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc298_c",
+      "label": "C",
+      "title": "Cards Query Problem",
+      "url": "https://atcoder.jp/contests/abc298/tasks/abc298_c",
+      "directory": {
+        "path": "abc298_c",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc298_d",
+      "label": "D",
+      "title": "Writing a Numeral",
+      "url": "https://atcoder.jp/contests/abc298/tasks/abc298_d",
+      "directory": {
+        "path": "abc298_d",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc298_e",
+      "label": "E",
+      "title": "Unfair Sugoroku",
+      "url": "https://atcoder.jp/contests/abc298/tasks/abc298_e",
+      "directory": {
+        "path": "abc298_e",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc298_f",
+      "label": "F",
+      "title": "Rook Score",
+      "url": "https://atcoder.jp/contests/abc298/tasks/abc298_f",
+      "directory": {
+        "path": "abc298_f",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc298_g",
+      "label": "G",
+      "title": "Strawberry War",
+      "url": "https://atcoder.jp/contests/abc298/tasks/abc298_g",
+      "directory": {
+        "path": "abc298_g",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "abc298_h",
+      "label": "Ex",
+      "title": "Sum of Min of Length",
+      "url": "https://atcoder.jp/contests/abc298/tasks/abc298_h",
+      "directory": {
+        "path": "abc298_h",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}

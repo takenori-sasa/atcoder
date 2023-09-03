@@ -30,26 +30,30 @@ def main():
     seat = 0
     res = []
     sz = 0
+    dp = [INF]*(10**5+1)
+    dp[0] = 0
     for i in range(n):
         x, y, z = [int(_x) for _x in input().rstrip().split()]
-        sz += z
-        if x > y:
-            seat += z
-        else:
-            res.append([z, x-(x+y+1)//2])
-    if seat > sz//2:
-        print(0)
-        return
-    # res.append([5, -6])
-    res = sorted(res, key=lambda x: (x[0], x[1]))
-    debugger(res)
+        next_dp = dp.copy()
+        gap = 2 * x - x - y
+        for i in range(half_voters + 1):
+            if i + gap >= 0 and i + gap <= half_voters:
+                next_dp[i + gap] = min(next_dp[i + gap], dp[i] + y - x)
+            next_dp[i] = min(next_dp[i], dp[i] + y - x)
+        dp = next_dp
+    # if seat > sz//2:
+    #     print(0)
+    #     return
+    # # res.append([5, -6])
+    # res = sorted(res, key=lambda x: (x[0], x[1]))
+    # debugger(res)
 
-    ans = 0
-    while seat < sz/2:
-        r = res.pop()
-        ans += -r[1]
-        seat += r[0]
-    print(ans)
+    # ans = 0
+    # while seat < sz/2:
+    #     r = res.pop()
+    #     ans += -r[1]
+    #     seat += r[0]
+    # print(ans)
 
 
 '''
